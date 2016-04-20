@@ -16,42 +16,24 @@ public class ConnectionMySQL {
 	private final static String PARAMS = "?zeroDateTimeBehavior=convertToNull";
 
 	private static ResultSet rs;
-	private static Connection conn;
+	private static Connection connect;
 	private static Statement stmt;
 
 	private static void connect() throws SQLException, ClassNotFoundException {
 		Class.forName(DRIVER);
-		conn = DriverManager.getConnection(URL + DB_NAME + PARAMS, USERNAME, PASSWORD);
-		stmt = conn.createStatement();
-	}
-
-	public static ResultSet exec(String query) {
-		try {
-			connect();
-			rs = stmt.executeQuery(query);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return rs;
+		connect = DriverManager.getConnection(URL + DB_NAME + PARAMS, USERNAME, PASSWORD);
+		stmt = connect.createStatement();
 	}
 	
-	public static ResultSet update(String query) {
-		try {
-			connect();
-			stmt.executeUpdate(query);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return rs;
-	}
-
-	public static void closeMysqlConnection() {
-		try {
-			rs.close();
-			stmt.close();
-			conn.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
+	public static Connection getInstance(){
+		if(connect == null){
+			try {
+				connect = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}		
+		return connect;	
+	}	
+	
 }
