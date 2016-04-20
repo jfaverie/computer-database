@@ -12,8 +12,6 @@ public class Company implements Serializable {
 		this.id = id;
 		this.name = name;
 	}
-
-
 	
 	public long getId() {
 		return id;

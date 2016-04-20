@@ -1,14 +1,12 @@
 package com.excilys.cdb.dao;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.List;
 
 import com.excilys.cdb.jdbc.ConnectionMySQL;
 
 public abstract class DAO<T> {
-	
-	
-public Connection connect = ConnectionMySQL.getInstance();
 	
 	/**
 	 * Permet de récupérer un objet via son ID
