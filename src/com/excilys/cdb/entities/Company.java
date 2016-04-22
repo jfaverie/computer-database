@@ -1,4 +1,4 @@
-package com.excilys.cdb.model;
+package com.excilys.cdb.entities;
 
 import java.io.Serializable;
 
@@ -7,6 +7,11 @@ public class Company implements Serializable {
 	private long id = 0;
 	private String name = "";
 	
+	
+	public Company() {
+		super();
+	}
+
 	public Company(long id, String name) {
 		super();
 		this.id = id;

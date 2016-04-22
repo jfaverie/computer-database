@@ -14,5 +14,8 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="/home/excilys/sdk/mysql-connector-java-5.1.38/mysql-connector-java-5.1.38-bin.jar"/>
+	<classpathentry kind="lib" path="/home/excilys/Téléchargements/logback-1.1.7/logback-classic-1.1.7.jar"/>
+	<classpathentry kind="lib" path="/home/excilys/Téléchargements/slf4j-1.7.21/slf4j-api-1.7.21.jar"/>
+	<classpathentry kind="lib" path="/home/excilys/Téléchargements/logback-1.1.7/logback-core-1.1.7.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

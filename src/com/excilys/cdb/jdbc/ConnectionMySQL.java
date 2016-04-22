@@ -12,19 +12,26 @@ public class ConnectionMySQL {
 	private final static String USERNAME = "admincdb";
 	private final static String PASSWORD = "qwerty1234";
 	private final static String PARAMS = "?zeroDateTimeBehavior=convertToNull";
-
-	private static ConnectionMySQL myConnection = new ConnectionMySQL();
+	// Instance singleton
+	private static ConnectionMySQL INSTANCE = null;
 	
-	public static ConnectionMySQL getInstance(){	
-		return myConnection;	
+	
+	public Connection getConnection(){	
+		Connection connection = null;
+			try {
+				connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		return connection;	
 	}
-	public Connection getConnection() throws SQLException {
-	    return DriverManager.getConnection(URL, USERNAME, PASSWORD);
-	  }
 	
-	private ConnectionMySQL() {
-	  }
-	
-	
+	// retourne l'instance et la crée si elle n'existe pas
+	public static ConnectionMySQL getInstance() {
+		if (INSTANCE == null) {
+			INSTANCE = new ConnectionMySQL();
+		}
+		return INSTANCE;
+	}
 	
 }
