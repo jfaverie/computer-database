@@ -1,21 +1,22 @@
-package com.excilys.cdb.entities;
+package com.excilys.cdb.model.entities;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.time.LocalDate;
 
 public class Computer implements Serializable {
 	
 	private long id=0;
 	private String name = "";
-	private Date introduced;
-	private Date discontinued;
+	private LocalDate introduced;
+	private LocalDate discontinued;
 	private Company company;
 
 	public Computer() {
 		super();
 	}
 
-	public Computer(int id, String name, Date introduced, Date discontinued, Company company) {
+	public Computer(int id, String name, LocalDate introduced, LocalDate discontinued, Company company) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -45,22 +46,22 @@ public class Computer implements Serializable {
 	}
 
 
-	public Date getIntroduced() {
+	public LocalDate getIntroduced() {
 		return introduced;
 	}
 
 
-	public void setIntroduced(Date introduced) {
-		this.introduced = introduced;
+	public void setIntroduced(LocalDate date) {
+		this.introduced = date;
 	}
 
 
-	public Date getDiscontinued() {
+	public LocalDate getDiscontinued() {
 		return discontinued;
 	}
 
 
-	public void setDiscontinued(Date discontinued) {
+	public void setDiscontinued(LocalDate discontinued) {
 		this.discontinued = discontinued;
 	}
 

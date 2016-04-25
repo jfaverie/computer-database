@@ -1,8 +1,10 @@
-package com.excilys.ui;
+package com.excilys.cdb.ui;
 
 import java.util.Scanner;
 
 public class Main {
+	
+	 protected static final int ELEM_PER_PAGE = 20;
 
 	private final Scanner scanner;
 

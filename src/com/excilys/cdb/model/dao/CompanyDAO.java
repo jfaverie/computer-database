@@ -1,4 +1,4 @@
-package com.excilys.cdb.dao;
+package com.excilys.cdb.model.dao;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -8,10 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.mysql.jdbc.PreparedStatement;
-import com.excilys.cdb.dao.DAO;
-import com.excilys.cdb.entities.*;
-import com.excilys.cdb.exception.DAOException;
-import com.excilys.cdb.jdbc.*;
+import com.excilys.cdb.model.dao.DAO;
+import com.excilys.cdb.model.entities.*;
+import com.excilys.cdb.model.exception.DAOException;
+import com.excilys.cdb.model.jdbc.*;
+import com.excilys.cdb.ui.CompanyConsole;
 
 public class CompanyDAO extends DAO<Company> {
 
@@ -21,6 +22,13 @@ public class CompanyDAO extends DAO<Company> {
 	private static final String UPDATE = "UPDATE company SET name= ? WHERE id = ?;";
 	private static final String DELETE = "DELETE FROM company WHERE id = ?;";
 	private static final String LISTALL = "SELECT id,name from company;";
+	
+	private static CompanyDAO ourInstance = new CompanyDAO();
+	
+	public static CompanyDAO getInstance() {
+		return ourInstance;
+		
+	}
 
 	@Override
 	public void create(Company comp) {
@@ -69,12 +77,11 @@ public class CompanyDAO extends DAO<Company> {
 	}
 
 	@Override
-	public void delete(Company comp) {
+	public void delete(long id) {
 		Connection connection = null;
 		try {
 			connection = ConnectionMySQL.getInstance().getConnection();
-			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(DELETE);
-			stmt.setLong(1, comp.getId());
+			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(String.format(DELETE, id));
 			stmt.executeUpdate();
 		} catch (SQLException e) {
 			throw new DAOException(e);
@@ -139,19 +146,21 @@ public class CompanyDAO extends DAO<Company> {
 	}
 
 	@Override
-	public List<Company> index() {
-		List<Company> companies = new ArrayList<>();
+	public Page<Company> index(int pageNb, int elemPerPg) {
+		Page<Company> page = null;
 		ResultSet rs = null;
 		Connection connection = null;
 
 		try {
 			connection = ConnectionMySQL.getInstance().getConnection();
-			rs = connection.prepareStatement(LISTALL).executeQuery();
+			rs = connection.prepareStatement(String.format(LISTALL, pageNb * elemPerPg, elemPerPg)).executeQuery();
+			page = new Page<>();
+			page.setPageNumber(pageNb);
 			while (rs.next()) {
 				Company company = new Company();
 				company.setId(rs.getLong("id"));
 				company.setName(rs.getString("name"));
-				companies.add(company);
+				page.addEntity(company);
 			}
 		} catch (SQLException e) {
 			throw new DAOException(e);
@@ -164,7 +173,7 @@ public class CompanyDAO extends DAO<Company> {
 			}
 
 		}
-		return companies;
+		return page;
 	}
 
 }

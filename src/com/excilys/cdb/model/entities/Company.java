@@ -1,4 +1,4 @@
-package com.excilys.cdb.entities;
+package com.excilys.cdb.model.entities;
 
 import java.io.Serializable;
 
