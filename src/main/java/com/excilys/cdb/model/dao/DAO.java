@@ -2,7 +2,7 @@ package com.excilys.cdb.model.dao;
 
 import com.excilys.cdb.model.entities.Page;
 
-public abstract class DAO<T> {
+public interface DAO<T> {
 
     /**
      * Permet de récupérer un objet via son ID.
@@ -24,8 +24,9 @@ public abstract class DAO<T> {
      * Create an entry on the DB relative to an object.
      * @param obj
      *            the object you want to update
+     * @return 
      */
-    public abstract void create(T obj);
+    public abstract long create(T obj);
 
     /**
      * Update an entry on the DB.

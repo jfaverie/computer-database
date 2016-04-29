@@ -1,6 +1,9 @@
 package com.excilys.cdb.model.entities;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+
+import com.excilys.cdb.model.entities.Computer.ComputerBuilder;
 
 public class Company implements Serializable {
 
@@ -10,7 +13,7 @@ public class Company implements Serializable {
     /**
      * Constructor.
      */
-    public Company() {
+    public Company(CompanyBuilder companyBuilder) {
         super();
     }
 
@@ -46,6 +49,27 @@ public class Company implements Serializable {
     @Override
     public String toString() {
         return "Company [id=" + id + ", name=" + name + "]";
+    }
+
+    public static class CompanyBuilder {
+
+        private long id = 0;
+        private String name = "";
+
+        private CompanyBuilder id(long id) {
+            this.id = id;
+            return this;
+        }
+
+        private CompanyBuilder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public Company build() {
+            return new Company(this);
+        }
+
     }
 
 }

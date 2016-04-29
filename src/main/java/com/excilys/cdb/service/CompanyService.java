@@ -47,14 +47,16 @@ public class CompanyService {
      * @param entity
      *            the company to add in the database
      */
-    public void add(Company entity) {
-        dao.create(entity);
+    public long create(Company entity) {
+        long id = 0;
+        id = dao.create(entity);
+        return id;
     }
 
     /**
      * Update a company in the database.
      * @param entity
-     *            tge company to update
+     *            the company to update
      */
     public void update(Company entity) {
         dao.update(entity);

@@ -38,7 +38,7 @@ public class ComputerService {
      *            the number of element per page
      * @return a page of computers
      */
-    public Page<Computer> getAll(int pageNb, int elemPerPg) {
+    public Page<Computer> index(int pageNb, int elemPerPg) {
         return dao.index(pageNb, elemPerPg);
     }
 
@@ -47,14 +47,16 @@ public class ComputerService {
      * @param entity
      *            the computer to add in the database
      */
-    public void add(Computer entity) {
-        dao.create(entity);
+    public long create(Computer entity) {
+        long id = 0;
+        id = dao.create(entity);
+        return id;
     }
 
     /**
      * Update a computer in the database.
      * @param entity
-     *            tge computer to update
+     *            the computer to update
      */
     public void update(Computer entity) {
         dao.update(entity);

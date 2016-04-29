@@ -7,6 +7,24 @@ public class Page<T> {
 
     private int pageNumber;
     private List<T> entities;
+    private int totalElements;
+    private int elementPerPage;
+
+    public int getTotalElements() {
+        return totalElements;
+    }
+
+    public void setTotalElements(int totalElements) {
+        this.totalElements = totalElements;
+    }
+
+    public int getElementPerPage() {
+        return elementPerPage;
+    }
+
+    public void setElementPerPage(int elementPerPage) {
+        this.elementPerPage = elementPerPage;
+    }
 
     public int getPageNumber() {
         return pageNumber;

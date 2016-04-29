@@ -13,8 +13,9 @@ public class Computer implements Serializable {
 
     /**
      * Constructor.
+     * @param computerBuilder
      */
-    public Computer() {
+    public Computer(ComputerBuilder computerBuilder) {
         super();
     }
 
@@ -142,6 +143,45 @@ public class Computer implements Serializable {
     public String toString() {
         return "Computer [id=" + id + ", name=" + name + ", introduced=" + introduced + ", discontinued=" + discontinued
                 + ", company=" + company + "]";
+    }
+
+    public static class ComputerBuilder {
+
+        private long id = 0;
+        private String name = "";
+        private LocalDate introduced;
+        private LocalDate discontinued;
+        private Company company;
+
+        private ComputerBuilder id(long id) {
+            this.id = id;
+            return this;
+        }
+
+        private ComputerBuilder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        private ComputerBuilder introduced(LocalDate introduced) {
+            this.introduced = introduced;
+            return this;
+        }
+
+        private ComputerBuilder discontinued(LocalDate discontinued) {
+            this.discontinued = discontinued;
+            return this;
+        }
+
+        private ComputerBuilder company(Company company) {
+            this.company = company;
+            return this;
+        }
+
+        public Computer build() {
+            return new Computer(this);
+        }
+
     }
 
 }

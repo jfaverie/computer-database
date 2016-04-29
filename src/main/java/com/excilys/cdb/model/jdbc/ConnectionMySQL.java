@@ -4,14 +4,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConnectionMySQL {
+public enum ConnectionMySQL {
 
+    INSTANCE;
+    
     private static final String URL = "jdbc:mysql://localhost:3306/computer-database-db";
     private static final String USERNAME = "admincdb";
     private static final String PASSWORD = "qwerty1234";
     private static final String PARAMS = "?zeroDateTimeBehavior=convertToNull";
-    // Instance singleton
-    private static ConnectionMySQL instance = null;
 
     /**
      * Private constructor of ConnectionMySQL for the singleton pattern.
@@ -33,17 +33,6 @@ public class ConnectionMySQL {
             e.printStackTrace();
         }
         return connection;
-    }
-
-    /**
-     * get an instance of the connection.
-     * @return instance
-     */
-    public static ConnectionMySQL getInstance() {
-        if (instance == null) {
-            instance = new ConnectionMySQL();
-        }
-        return instance;
     }
 
 }
