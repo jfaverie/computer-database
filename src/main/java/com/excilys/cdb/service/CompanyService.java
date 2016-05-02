@@ -1,24 +1,16 @@
 package com.excilys.cdb.service;
 
 import com.excilys.cdb.model.dao.CompanyDAO;
+import com.excilys.cdb.model.dao.ComputerDAO;
+import com.excilys.cdb.model.dto.CompanyDTO;
 import com.excilys.cdb.model.entities.Company;
 import com.excilys.cdb.model.entities.Page;
+import com.excilys.cdb.model.mappers.CompanyMapper;
 
-public class CompanyService {
-
-    private static CompanyService instance = new CompanyService();
-    private final CompanyDAO dao;
-
-    public static CompanyService getInstance() {
-        return instance;
-    }
-
-    /**
-     * Init the DAO for the service.
-     */
-    private CompanyService() {
-        dao = CompanyDAO.getInstance();
-    }
+public enum CompanyService {
+    
+    INSTANCE;
+    private static final CompanyDAO DAO = CompanyDAO.INSTANCE;
 
     /**
      * Return a company from an id.
@@ -26,8 +18,8 @@ public class CompanyService {
      *            of the company
      * @return the company you want
      */
-    public Company getById(Long id) {
-        return dao.findById(id);
+    public CompanyDTO getById(Long id) {
+        return CompanyMapper.convertCompany(DAO.findById(id));
     }
 
     /**
@@ -38,8 +30,8 @@ public class CompanyService {
      *            the number of element per page
      * @return a page of companies
      */
-    public Page<Company> index(int pageNb, int elemPerPg) {
-        return dao.index(pageNb, elemPerPg);
+    public Page<CompanyDTO> index(int pageNb, int elemPerPg) {
+        return CompanyMapper.convertListCompanies(DAO.index(pageNb, elemPerPg));
     }
 
     /**
@@ -49,7 +41,7 @@ public class CompanyService {
      */
     public long create(Company entity) {
         long id = 0;
-        id = dao.create(entity);
+        id = DAO.create(entity);
         return id;
     }
 
@@ -59,7 +51,7 @@ public class CompanyService {
      *            the company to update
      */
     public void update(Company entity) {
-        dao.update(entity);
+        DAO.update(entity);
     }
 
     /**
@@ -68,7 +60,7 @@ public class CompanyService {
      *            the id of the company to delete
      */
     public void delete(Long id) {
-        dao.delete(id);
+        DAO.delete(id);
     }
 
 }

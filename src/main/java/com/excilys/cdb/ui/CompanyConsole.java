@@ -27,7 +27,7 @@ public class CompanyConsole {
      */
     private CompanyConsole() {
         scanner = KeyboardScanner.getInstance();
-        dao = CompanyDAO.getInstance();
+        dao = CompanyDAO.INSTANCE;
 
     }
 
@@ -95,7 +95,7 @@ public class CompanyConsole {
     public void create() {
         System.out.println(CompanyMenu.add());
 
-        Company company = new Company();
+        Company company = null;
 
         do {
             company.setName(scanner.nextString());
@@ -113,7 +113,7 @@ public class CompanyConsole {
      * Display CLI commands to update a company.
      */
     public void update() {
-        Company company = new Company();
+        Company company = null;
 
         System.out.println("Donnez l'identifiant de l'entreprise à mettre à jour :");
 

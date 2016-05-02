@@ -1,15 +1,16 @@
 package com.excilys.cdb.model.dto;
 
+
 public class CompanyDTO {
 
     private String name;
-    private int id;
+    private long id;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -21,11 +22,13 @@ public class CompanyDTO {
         this.name = name;
     }
 
+
+
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + id;
+        result = prime * result + (int) (id ^ (id >>> 32));
         result = prime * result + ((name == null) ? 0 : name.hashCode());
         return result;
     }
@@ -49,6 +52,51 @@ public class CompanyDTO {
         return true;
     }
 
+    /**
+     * Use to return a builder.
+     * @return a builder
+     */
+    public static Builder getBuilder() {
+        return new Builder();
+    }
 
+    public static class Builder {
 
+        private final CompanyDTO companyDTO = new CompanyDTO();
+
+        public Builder() {
+            super();
+        }
+
+        /**
+         * Use to set the id.
+         * @param id
+         *            to set
+         * @return the builder
+         */
+        public Builder id(long id) {
+            this.companyDTO.id = id;
+            return this;
+        }
+
+        /**
+         * Use to set the name.
+         * @param name
+         *            to set
+         * @return a builder
+         */
+        public Builder name(String name) {
+            this.companyDTO.name = name;
+            return this;
+        }
+        
+        /**
+         * Return the builder.
+         * @return the builder
+         */
+        public CompanyDTO build() {
+            return this.companyDTO;
+        }
+
+    }
 }

@@ -1,45 +1,36 @@
 package com.excilys.cdb.service;
 
 import com.excilys.cdb.model.dao.ComputerDAO;
+import com.excilys.cdb.model.dto.ComputerDTO;
 import com.excilys.cdb.model.entities.Computer;
 import com.excilys.cdb.model.entities.Page;
+import com.excilys.cdb.model.mappers.ComputerMapper;;
 
-public class ComputerService {
+public enum ComputerService {
 
-    private static ComputerService instance = new ComputerService();
-    private final ComputerDAO dao;
-
-    public static ComputerService getInstance() {
-        return instance;
-    }
+    INSTANCE;
+    private static final ComputerDAO DAO = ComputerDAO.INSTANCE;
 
     /**
-     * Init the DAO for the service.
-     */
-    private ComputerService() {
-        dao = ComputerDAO.getInstance();
-    }
-
-    /**
-     * Return a computer from an id.
+     * Return a computerDTO from a computer id.
      * @param id
      *            of the computer
-     * @return the computer you want
+     * @return the computerDTO you want
      */
-    public Computer getById(Long id) {
-        return dao.findById(id);
+    public ComputerDTO getById(Long id) {
+        return ComputerMapper.convertComputer(DAO.findById(id));
     }
 
     /**
-     * Return all the computer of the database, per page.
+     * Return all the computers of the database, per page.
      * @param pageNb
      *            the page you want
      * @param elemPerPg
      *            the number of element per page
      * @return a page of computers
      */
-    public Page<Computer> index(int pageNb, int elemPerPg) {
-        return dao.index(pageNb, elemPerPg);
+    public Page<ComputerDTO> index(int pageNb, int elemPerPg) {
+        return ComputerMapper.convertList(DAO.index(pageNb, elemPerPg));
     }
 
     /**
@@ -49,7 +40,7 @@ public class ComputerService {
      */
     public long create(Computer entity) {
         long id = 0;
-        id = dao.create(entity);
+        id = DAO.create(entity);
         return id;
     }
 
@@ -59,7 +50,7 @@ public class ComputerService {
      *            the computer to update
      */
     public void update(Computer entity) {
-        dao.update(entity);
+        DAO.update(entity);
     }
 
     /**
@@ -68,7 +59,7 @@ public class ComputerService {
      *            the id of the computer to delete
      */
     public void delete(Long id) {
-        dao.delete(id);
+        DAO.delete(id);
     }
 
 }

@@ -28,7 +28,7 @@ public class ComputerConsole {
      */
     private ComputerConsole() {
         scanner = KeyboardScanner.getInstance();
-        dao = ComputerDAO.getInstance();
+        dao = ComputerDAO.INSTANCE;
 
     }
 
@@ -94,7 +94,7 @@ public class ComputerConsole {
      */
     public void create() {
         LocalDate date;
-        Computer computer = new Computer();
+        Computer computer = null;
 
         System.out.println("Entrer le nom de l'ordinateur");
         do {
@@ -110,7 +110,7 @@ public class ComputerConsole {
         computer.setDiscontinued(date);
 
         System.out.println("Entrer l'identifiant du constructeur");
-        computer.setCompany(CompanyDAO.getInstance().findById(scanner.nextLong()));
+        computer.setCompany(CompanyDAO.INSTANCE.findById(scanner.nextLong()));
 
         try {
             dao.create(computer);
@@ -152,7 +152,7 @@ public class ComputerConsole {
         System.out.println("Entrer l'identifiant du constructeur");
         System.out.println("Ancien identifiant de l'entreprise " + computer.getCompany().getName() + " : "
                 + computer.getCompany().getId());
-        computer.setCompany(CompanyDAO.getInstance().findById(scanner.nextLong()));
+        computer.setCompany(CompanyDAO.INSTANCE.findById(scanner.nextLong()));
 
         try {
             dao.update(computer);

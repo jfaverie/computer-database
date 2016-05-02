@@ -16,6 +16,10 @@ public class Company implements Serializable {
     public Company(CompanyBuilder companyBuilder) {
         super();
     }
+    
+    public Company() {
+        super();
+    }
 
     /**
      * Constructor.
@@ -53,8 +57,12 @@ public class Company implements Serializable {
 
     public static class CompanyBuilder {
 
-        private long id = 0;
-        private String name = "";
+        private long id;
+        private String name;
+
+        public CompanyBuilder() {
+            super();
+        }
 
         private CompanyBuilder id(long id) {
             this.id = id;

@@ -14,6 +14,7 @@ import com.excilys.cdb.model.exception.DAOException;
 import com.excilys.cdb.model.jdbc.ConnectionMySQL;
 
 public enum ComputerDAO implements DAO<Computer> {
+
     INSTANCE;
     
     private static final String FIND_ID = "SELECT cr.id, cr.name, cr.introduced, cr.discontinued, cy.id company_id, cy.name company_name FROM computer cr LEFT JOIN company cy on cr.company_id = cy.id WHERE cr.id = ?;";
@@ -27,7 +28,7 @@ public enum ComputerDAO implements DAO<Computer> {
 
     @Override
     public Computer findById(long id) {
-        Computer computer = null;
+        Computer computer = new Computer();
         ResultSet rs = null;
         Connection connection = null;
         try {
@@ -36,7 +37,7 @@ public enum ComputerDAO implements DAO<Computer> {
             stmt.setLong(1, id);
             rs = stmt.executeQuery();
             rs.next();
-            Company company = null;
+            Company company = new Company();
             computer.setId(rs.getLong("cr.id"));
             computer.setName(rs.getString("cr.name"));
             Date intro = rs.getDate("cr.introduced");
@@ -69,7 +70,7 @@ public enum ComputerDAO implements DAO<Computer> {
 
     @Override
     public Computer findByName(String name) {
-        Computer computer = null;
+        Computer computer = new Computer();
         ResultSet rs = null;
         Connection connection = null;
         try {
@@ -78,7 +79,7 @@ public enum ComputerDAO implements DAO<Computer> {
             stmt.setString(1, name);
             rs = stmt.executeQuery();
             rs.next();
-            Company company = null;
+            Company company = new Company();
             computer.setId(rs.getLong("cr.id"));
             computer.setName(rs.getString("cr.name"));
             Date intro = rs.getDate("cr.introduced");
@@ -236,8 +237,8 @@ public enum ComputerDAO implements DAO<Computer> {
             page = new Page<>();
             page.setPageNumber(pageNb);
             while (rs.next()) {
-                Computer computer = null;
-                Company company = null;
+                Computer computer = new Computer();
+                Company company = new Company();
                 computer.setId(rs.getLong("cr.id"));
                 computer.setName(rs.getString("cr.name"));
                 Date intro = rs.getDate("cr.introduced");

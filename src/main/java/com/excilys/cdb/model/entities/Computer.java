@@ -13,14 +13,20 @@ public class Computer implements Serializable {
 
     /**
      * Constructor.
+     * 
      * @param computerBuilder
      */
     public Computer(ComputerBuilder computerBuilder) {
         super();
     }
+    
+    public Computer() {
+        super();
+    }
 
     /**
      * Constructor.
+     * 
      * @param id
      *            id of the Computer
      * @param name
@@ -147,11 +153,15 @@ public class Computer implements Serializable {
 
     public static class ComputerBuilder {
 
-        private long id = 0;
-        private String name = "";
+        private long id;
+        private String name;
         private LocalDate introduced;
         private LocalDate discontinued;
         private Company company;
+
+        public ComputerBuilder() {
+            super();
+        }
 
         private ComputerBuilder id(long id) {
             this.id = id;

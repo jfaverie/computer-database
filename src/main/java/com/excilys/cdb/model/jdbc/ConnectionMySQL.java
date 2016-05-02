@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import com.excilys.cdb.model.exception.DAOException;
+
 public enum ConnectionMySQL {
 
     INSTANCE;
@@ -17,6 +19,11 @@ public enum ConnectionMySQL {
      * Private constructor of ConnectionMySQL for the singleton pattern.
     */
    private ConnectionMySQL() {
+       try {
+        Class.forName("com.mysql.jdbc.Driver");
+    } catch (ClassNotFoundException e) {
+        throw new DAOException(e);
+    }
    }
 
     /**

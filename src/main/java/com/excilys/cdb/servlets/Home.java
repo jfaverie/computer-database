@@ -1,8 +1,6 @@
 package com.excilys.cdb.servlets;
 
 import java.io.IOException;
-import java.util.Map;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,19 +17,18 @@ import com.excilys.cdb.model.entities.Page;
 import com.excilys.cdb.model.exception.DAOException;
 import com.excilys.cdb.service.ComputerService;
 
-@WebServlet(name = "IndexComputer", urlPatterns = { "/computer" })
+@WebServlet(name = "Home", urlPatterns = { "/home" })
 public class Home extends HttpServlet {
-
 
     private static final long serialVersionUID = 1L;
     private static final Logger LOGGER = LoggerFactory.getLogger(Home.class);
-    
+
     private static ComputerService computerService;
     private Page<Computer> page;
 
     public Home() {
         super();
-        computerService = ComputerService.getInstance();
+        computerService = ComputerService.INSTANCE;
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -65,18 +62,18 @@ public class Home extends HttpServlet {
 
         try {
             Page<ComputerDTO> computers = computerService.index(page, limit);
-            
+
             request.setAttribute("computersCount", computers.getTotalElements());
             request.setAttribute("currentPage", computers.getPageNumber());
-            request.setAttribute("pageCount", computers.getTotalElements() / computers.getElementPerPage());
+            request.setAttribute("pageCount",
+                    (int) Math.ceil(computers.getTotalElements() / (double) computers.getElementPerPage()));
             request.setAttribute("computers", computers.getEntities());
         } catch (DAOException e) {
             LOGGER.error("Error when get all computers", e.getMessage());
             response.sendError(HttpServletResponse.SC_NOT_ACCEPTABLE);
         }
 
-        request.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(request,
-                response);
+        request.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(request, response);
     }
 
     @Override
