@@ -3,6 +3,8 @@ package com.excilys.cdb.model.entities;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import com.excilys.cdb.model.dto.ComputerDTO;
+
 public class Computer implements Serializable {
 
     private long id = 0;
@@ -45,6 +47,19 @@ public class Computer implements Serializable {
         this.introduced = introduced;
         this.discontinued = discontinued;
         this.company = company;
+    }
+    
+
+    /**
+     * Create an entity from a dto.
+     * @param dto the dto used to create the entity
+     */
+    public Computer(ComputerDTO dto) {
+        this.setId(dto.getId());
+        this.name = dto.getName();
+        this.introduced = dto.getIntroduced();
+        this.discontinued = dto.getDiscontinued();
+        this.company = new Company(dto.getCompany());
     }
 
     public long getId() {

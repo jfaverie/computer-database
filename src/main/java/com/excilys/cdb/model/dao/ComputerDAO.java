@@ -12,6 +12,8 @@ import com.excilys.cdb.model.entities.Computer;
 import com.excilys.cdb.model.entities.Page;
 import com.excilys.cdb.model.exception.DAOException;
 import com.excilys.cdb.model.jdbc.ConnectionMySQL;
+import com.excilys.cdb.resources.SortColumn;
+import com.excilys.cdb.resources.SortType;
 
 public enum ComputerDAO implements DAO<Computer> {
 
@@ -22,7 +24,9 @@ public enum ComputerDAO implements DAO<Computer> {
     private static final String CREATE = "INSERT INTO computer (name,introduced,discontinued,company_id) VALUES (?,?,?,?);";
     private static final String UPDATE = "UPDATE computer SET name= ?, introduced= ?, discontinued = ?, company_id = ? WHERE id = ?;";
     private static final String DELETE = "DELETE FROM computer WHERE id = ?;";
+    private static final String DELETE_BY_COMPANY = "DELETE FROM computer WHERE company_id = ?;";
     private static final String LISTALL = "SELECT cr.id, cr.name, cr.introduced, cr.discontinued, cy.id company_id, cy.name company_name FROM computer cr LEFT JOIN company cy on cr.company_id = cy.id LIMIT %d, %d;";
+    private static final String LISTALL_ORDERED = "SELECT cr.id, cr.name, cr.introduced, cr.discontinued, cy.id company_id, cy.name company_name FROM computer cr LEFT JOIN company cy on cr.company_id = cy.id ORDER BY %s LIMIT %d, %d;";
     private static final String COUNT = "SELECT COUNT(*) FROM computer";
     private static final String LISTID = "SELECT id FROM company";
 
@@ -223,6 +227,25 @@ public enum ComputerDAO implements DAO<Computer> {
         }
 
     }
+    
+    @Override
+    public void delete(long id, Connection connection) {
+        try {
+            PreparedStatement stmt = connection.prepareStatement(DELETE_BY_COMPANY);
+            stmt.setLong(1, id);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new DAOException("Fail to delete a computer", e);
+        } finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                throw new DAOException("Fail to close the connection", e);
+            }
+        }
+
+        
+    }
 
     @Override
     public Page<Computer> index(int pageNb, int elemPerPg) {
@@ -275,5 +298,59 @@ public enum ComputerDAO implements DAO<Computer> {
         }
         return page;
     }
+
+    @Override
+    public Page<Computer> indexSort(int pageNb, int elemPerPg, SortColumn sc, SortType sortType) {
+        Page<Computer> page = new Page<>();
+        Connection connection = null;
+        page.setPageNumber(pageNb);
+        page.setElementPerPage(elemPerPg);
+        ResultSet rs = null;
+        try {
+            connection = ConnectionMySQL.INSTANCE.getConnection();
+            rs = connection.prepareStatement(String.format(LISTALL, pageNb * elemPerPg, elemPerPg)).executeQuery();
+            page = new Page<>();
+            page.setPageNumber(pageNb);
+            while (rs.next()) {
+                Computer computer = new Computer();
+                Company company = new Company();
+                computer.setId(rs.getLong("cr.id"));
+                computer.setName(rs.getString("cr.name"));
+                Date intro = rs.getDate("cr.introduced");
+                if (intro != null) {
+                    computer.setIntroduced(intro.toLocalDate());
+                }
+                Date disco = rs.getDate("cr.discontinued");
+                if (disco != null) {
+                    computer.setDiscontinued(disco.toLocalDate());
+                }
+                Long companyid = rs.getLong("company_id");
+                String companyname = rs.getString("company_name");
+                if (companyid != null) {
+                    company.setId(companyid);
+                    company.setName(companyname);
+                    computer.setCompany(company);
+                }
+                page.addEntity(computer);
+            }
+            rs.close();
+            rs = connection.prepareStatement(String.format(COUNT, pageNb * elemPerPg, elemPerPg)).executeQuery();
+            rs.next();
+            page.setTotalElements(rs.getInt(1));
+
+        } catch (SQLException e) {
+            throw new DAOException("Fail to get all computers", e);
+        } finally {
+            try {
+                connection.close();
+                rs.close();
+            } catch (SQLException e) {
+                throw new DAOException("Fail to close the connection", e);
+            }
+        }
+        return page;
+    }
+
+
 
 }

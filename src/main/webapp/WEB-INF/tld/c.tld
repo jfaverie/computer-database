@@ -6,7 +6,7 @@
 	<tag>
 		<name>link</name>
 		<tag-class>com.excilys.cdb.tags.Link</tag-class>
-		<body-content>scriptless</body-content>
+		<body-content>scriptLess</body-content>
 		<attribute>
 			<name>name</name>
 			<rtexprvalue>true</rtexprvalue>
@@ -28,7 +28,7 @@
 	<tag>
 		<name>pagination</name>
 		<tag-class>com.excilys.cdb.tags.Pagination</tag-class>
-		<body-content>scriptless</body-content>
+		<body-content>scriptLess</body-content>
 		<attribute>
 			<name>page</name>
 			<rtexprvalue>true</rtexprvalue>

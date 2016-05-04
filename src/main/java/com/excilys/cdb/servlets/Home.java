@@ -23,12 +23,11 @@ public class Home extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private static final Logger LOGGER = LoggerFactory.getLogger(Home.class);
 
-    private static ComputerService computerService;
+    private static final ComputerService COMPUTER_SERVICE = ComputerService.INSTANCE;
     private Page<Computer> page;
 
     public Home() {
         super();
-        computerService = ComputerService.INSTANCE;
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -47,13 +46,7 @@ public class Home extends HttpServlet {
             limit = Integer.parseInt(request.getParameter("limit"));
             session.setAttribute("limit", limit);
         } catch (NumberFormatException ignored) {
-            Object sLimit = session.getAttribute("limit");
-
-            if (sLimit == null) {
-                limit = 10;
-            } else {
-                limit = (Integer) sLimit;
-            }
+            limit = 10;
         }
 
         if (page < 1) {
@@ -61,11 +54,12 @@ public class Home extends HttpServlet {
         }
 
         try {
-            Page<ComputerDTO> computers = computerService.index(page, limit);
+            Page<ComputerDTO> computers = COMPUTER_SERVICE.index(page, limit);
 
-            request.setAttribute("computersCount", computers.getTotalElements());
+            request.setAttribute("search", computers.getSearch());
+            request.setAttribute("nbComputers", computers.getTotalElements());
             request.setAttribute("currentPage", computers.getPageNumber());
-            request.setAttribute("pageCount",
+            request.setAttribute("nbPage",
                     (int) Math.ceil(computers.getTotalElements() / (double) computers.getElementPerPage()));
             request.setAttribute("computers", computers.getEntities());
         } catch (DAOException e) {

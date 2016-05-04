@@ -17,7 +17,7 @@ public class ComputerServiceTest {
 
     @Before
     public void setUp() throws Exception {
-        service = ComputerService.getInstance();
+        service = ComputerService.INSTANCE;
     }
 
     @Test

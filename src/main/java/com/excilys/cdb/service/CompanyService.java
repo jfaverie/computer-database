@@ -1,16 +1,22 @@
 package com.excilys.cdb.service;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+
 import com.excilys.cdb.model.dao.CompanyDAO;
 import com.excilys.cdb.model.dao.ComputerDAO;
 import com.excilys.cdb.model.dto.CompanyDTO;
 import com.excilys.cdb.model.entities.Company;
 import com.excilys.cdb.model.entities.Page;
+import com.excilys.cdb.model.exception.DAOException;
+import com.excilys.cdb.model.jdbc.ConnectionMySQL;
 import com.excilys.cdb.model.mappers.CompanyMapper;
 
 public enum CompanyService {
     
     INSTANCE;
-    private static final CompanyDAO DAO = CompanyDAO.INSTANCE;
+    private static final CompanyDAO COMPANYDAO = CompanyDAO.INSTANCE;
+    private static final ComputerDAO COMPUTERDAO = ComputerDAO.INSTANCE;
 
     /**
      * Return a company from an id.
@@ -19,7 +25,7 @@ public enum CompanyService {
      * @return the company you want
      */
     public CompanyDTO getById(Long id) {
-        return CompanyMapper.convertCompany(DAO.findById(id));
+        return CompanyMapper.convertCompany(COMPANYDAO.findById(id));
     }
 
     /**
@@ -31,7 +37,7 @@ public enum CompanyService {
      * @return a page of companies
      */
     public Page<CompanyDTO> index(int pageNb, int elemPerPg) {
-        return CompanyMapper.convertListCompanies(DAO.index(pageNb, elemPerPg));
+        return CompanyMapper.convertListCompanies(COMPANYDAO.index(pageNb, elemPerPg));
     }
 
     /**
@@ -39,9 +45,9 @@ public enum CompanyService {
      * @param entity
      *            the company to add in the database
      */
-    public long create(Company entity) {
+    public long create(CompanyDTO entity) {
         long id = 0;
-        id = DAO.create(entity);
+        id = COMPANYDAO.create(new Company(entity));
         return id;
     }
 
@@ -50,8 +56,8 @@ public enum CompanyService {
      * @param entity
      *            the company to update
      */
-    public void update(Company entity) {
-        DAO.update(entity);
+    public void update(CompanyDTO entity) {
+        COMPANYDAO.update(new Company(entity));
     }
 
     /**
@@ -60,7 +66,25 @@ public enum CompanyService {
      *            the id of the company to delete
      */
     public void delete(Long id) {
-        DAO.delete(id);
+        Connection connection = ConnectionMySQL.INSTANCE.getConnection();
+        try {
+            connection.setAutoCommit(false);
+            COMPUTERDAO.delete(id, connection);
+            COMPANYDAO.delete(id);
+        } catch (DAOException | SQLException e) {
+            try {
+                connection.rollback();
+            } catch (SQLException e2) {
+                throw new DAOException(e2);
+            }
+        } finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                throw new DAOException("Fail to close the connection", e);
+            }
+        }
     }
+
 
 }

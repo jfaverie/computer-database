@@ -1,15 +1,18 @@
 package com.excilys.cdb.service;
 
+import java.sql.Connection;
+
 import com.excilys.cdb.model.dao.ComputerDAO;
 import com.excilys.cdb.model.dto.ComputerDTO;
 import com.excilys.cdb.model.entities.Computer;
 import com.excilys.cdb.model.entities.Page;
-import com.excilys.cdb.model.mappers.ComputerMapper;;
+import com.excilys.cdb.model.jdbc.ConnectionMySQL;
+import com.excilys.cdb.model.mappers.ComputerMapper;
 
 public enum ComputerService {
 
     INSTANCE;
-    private static final ComputerDAO DAO = ComputerDAO.INSTANCE;
+    private static final ComputerDAO COMPUTERDAO = ComputerDAO.INSTANCE;
 
     /**
      * Return a computerDTO from a computer id.
@@ -18,7 +21,7 @@ public enum ComputerService {
      * @return the computerDTO you want
      */
     public ComputerDTO getById(Long id) {
-        return ComputerMapper.convertComputer(DAO.findById(id));
+        return ComputerMapper.convertComputer(COMPUTERDAO.findById(id));
     }
 
     /**
@@ -30,7 +33,7 @@ public enum ComputerService {
      * @return a page of computers
      */
     public Page<ComputerDTO> index(int pageNb, int elemPerPg) {
-        return ComputerMapper.convertList(DAO.index(pageNb, elemPerPg));
+        return ComputerMapper.convertList(COMPUTERDAO.index(pageNb, elemPerPg));
     }
 
     /**
@@ -38,9 +41,9 @@ public enum ComputerService {
      * @param entity
      *            the computer to add in the database
      */
-    public long create(Computer entity) {
+    public long create(ComputerDTO entity) {
         long id = 0;
-        id = DAO.create(entity);
+        id = COMPUTERDAO.create(new Computer(entity));
         return id;
     }
 
@@ -49,8 +52,8 @@ public enum ComputerService {
      * @param entity
      *            the computer to update
      */
-    public void update(Computer entity) {
-        DAO.update(entity);
+    public void update(ComputerDTO entity) {
+        COMPUTERDAO.update(new Computer(entity));
     }
 
     /**
@@ -59,7 +62,7 @@ public enum ComputerService {
      *            the id of the computer to delete
      */
     public void delete(Long id) {
-        DAO.delete(id);
+        COMPUTERDAO.delete(id);
     }
 
 }

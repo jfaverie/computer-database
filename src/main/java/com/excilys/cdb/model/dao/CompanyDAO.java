@@ -11,6 +11,8 @@ import com.excilys.cdb.model.entities.Company;
 import com.excilys.cdb.model.entities.Page;
 import com.excilys.cdb.model.exception.DAOException;
 import com.excilys.cdb.model.jdbc.ConnectionMySQL;
+import com.excilys.cdb.resources.SortColumn;
+import com.excilys.cdb.resources.SortType;
 
 public enum CompanyDAO implements DAO<Company> {
 
@@ -27,7 +29,7 @@ public enum CompanyDAO implements DAO<Company> {
 
     @Override
     public Company findById(long id) {
-        Company company = null;
+        Company company = new Company();
         ResultSet rs = null;
         Connection connection = null;
         try {
@@ -52,7 +54,7 @@ public enum CompanyDAO implements DAO<Company> {
 
     @Override
     public Company findByName(String name) {
-        Company company = null;
+        Company company = new Company();
         ResultSet rs = null;
         Connection connection = null;
         try {
@@ -169,6 +171,30 @@ public enum CompanyDAO implements DAO<Company> {
     }
 
     @Override
+    public void delete(long companyId, Connection connection) {
+        try {
+            PreparedStatement stmt = connection.prepareStatement(DELETE);
+            stmt.setLong(1, companyId);
+            stmt.executeUpdate();
+            if (stmt.executeUpdate() > 1) {
+                CompanyDAO.LOGGER.info("Delete a company");
+            } else {
+                CompanyDAO.LOGGER.warn("Fail to delete a company");
+            }
+        } catch (SQLException e) {
+            CompanyDAO.LOGGER.error(e.getMessage());
+            throw new DAOException("Fail to delete a company", e);
+        } finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                throw new DAOException("Fail to close the connection", e);
+            }
+        }
+
+    }
+
+    @Override
     public Page<Company> index(int pageNb, int elemPerPg) {
         Page<Company> page = new Page<>();
         ResultSet rs = null;
@@ -182,7 +208,7 @@ public enum CompanyDAO implements DAO<Company> {
             page = new Page<>();
             page.setPageNumber(pageNb);
             while (rs.next()) {
-                Company company = null;
+                Company company = new Company();
                 company.setId(rs.getLong("id"));
                 company.setName(rs.getString("name"));
                 page.addEntity(company);
@@ -205,6 +231,12 @@ public enum CompanyDAO implements DAO<Company> {
 
         }
         return page;
+    }
+
+    @Override
+    public Page<Company> indexSort(int pageNb, int elemPerPg, SortColumn sc, SortType sortType) {
+        // TODO Auto-generated method stub
+        return null;
     }
 
 }
