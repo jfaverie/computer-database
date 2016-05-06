@@ -44,7 +44,7 @@
 				</div>
 				<div class="pull-right">
 					<mylib:link msg="Add Computer" idRef="addComputer"
-						classRef="btn btn-success" context="computerAddServlet" cursor="0"
+						classRef="btn btn-success" context="addComputer" cursor="0"
 						offset="10" search="" sortType="0" sortCol="0" />
 					<a class="btn btn-default" id="editComputer" href="#"
 						onclick="$.fn.toggleEditMode();">Edit</a>
@@ -73,23 +73,27 @@
 						<th><mylib:link context="" msg="Computer name"
 								cursor="${currentPage}"
 								offset="${nbPage}"
-								search="${search}" sortCol="1"
-								sortType="${computers2.getSortCol().ordinal() == 1 && computers2.getSortType().ordinal() == 0 ? 1 : 0}" /></th>
+								search="${search}" 
+								sortCol="1"
+								sortType="${computerSort}" /></th>
 						<th><mylib:link context="" msg="Introduced date"
 								cursor="${currentPage}"
 								offset="${nbPage}"
-								search="${search}" sortCol="2"
-								sortType="${computers2.getSortCol().ordinal() == 2 && computers2.getSortType().ordinal() == 0 ? 1 : 0}" /></th>
+								search="${search}" 
+								sortCol="2"
+								sortType="${introSort}" /></th>
 						<th><mylib:link context="" msg="Discontinued date"
 								cursor="${currentPage}"
 								offset="${nbPage}"
-								search="${search}" sortCol="3"
-								sortType="${computers2.getSortCol().ordinal() == 3 && computers2.getSortType().ordinal() == 0 ? 1 : 0}" /></th>
+								search="${search}" 
+								sortCol="3"
+								sortType="${discoSort}" /></th>
 						<th><mylib:link context="" msg="Company"
 								cursor="${currentPage}"
 								offset="${nbPage}"
-								search="${search}" sortCol="4"
-								sortType="${computers2.getSortCol().ordinal() == 4 && computers2.getSortType().ordinal() == 0 ? 1 : 0}" /></th>
+								search="${search}" 
+								sortCol="4"
+								sortType="${companySort}" /></th>
 
 					</tr>
 				</thead>
@@ -112,7 +116,7 @@
 
 	<footer class="navbar-fixed-bottom">
 		<div class="container text-center">
-			<mylib:pagination currentPage="${currentPage}" offset="${nbPage}" nbPage="${nbPage}" search="${search}" sortType="${computers.getSortType().ordinal()}" sortCol="${computers.getSortCol().ordinal()}"/>
+			<mylib:pagination currentPage="${currentPage}" offset="${nbPage}" nbPage="${nbPage}" search="${search}" sortType="${sortType}" sortCol="${sortCol}"/>
 			<div class="btn-group btn-group-sm pull-right" role="group">
 				<button onclick="self.location.href='?page=0&nbel=10'" type="button"
 					class="btn btn-default">10</button>

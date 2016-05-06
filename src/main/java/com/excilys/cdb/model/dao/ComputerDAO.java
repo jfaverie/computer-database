@@ -26,7 +26,7 @@ public enum ComputerDAO implements DAO<Computer> {
     private static final String DELETE = "DELETE FROM computer WHERE id = ?;";
     private static final String DELETE_BY_COMPANY = "DELETE FROM computer WHERE company_id = ?;";
     private static final String LISTALL = "SELECT cr.id, cr.name, cr.introduced, cr.discontinued, cy.id company_id, cy.name company_name FROM computer cr LEFT JOIN company cy on cr.company_id = cy.id LIMIT %d, %d;";
-    private static final String LISTALL_ORDERED = "SELECT cr.id, cr.name, cr.introduced, cr.discontinued, cy.id company_id, cy.name company_name FROM computer cr LEFT JOIN company cy on cr.company_id = cy.id ORDER BY %s LIMIT %d, %d;";
+    private static final String LISTALL_ORDERED = "SELECT cr.id, cr.name, cr.introduced, cr.discontinued, cy.id company_id, cy.name company_name FROM computer cr LEFT JOIN company cy on cr.company_id = cy.id WHERE cr.name LIKE ? ORDER BY %s LIMIT ?, ?;";
     private static final String COUNT = "SELECT COUNT(*) FROM computer";
     private static final String LISTID = "SELECT id FROM company";
 
@@ -257,8 +257,6 @@ public enum ComputerDAO implements DAO<Computer> {
         try {
             connection = ConnectionMySQL.INSTANCE.getConnection();
             rs = connection.prepareStatement(String.format(LISTALL, pageNb * elemPerPg, elemPerPg)).executeQuery();
-            page = new Page<>();
-            page.setPageNumber(pageNb);
             while (rs.next()) {
                 Computer computer = new Computer();
                 Company company = new Company();
@@ -300,17 +298,22 @@ public enum ComputerDAO implements DAO<Computer> {
     }
 
     @Override
-    public Page<Computer> indexSort(int pageNb, int elemPerPg, SortColumn sc, SortType sortType) {
+    public Page<Computer> indexSort(int pageNb, int elemPerPg, SortColumn sc, SortType sortType, String name) {
         Page<Computer> page = new Page<>();
         Connection connection = null;
         page.setPageNumber(pageNb);
         page.setElementPerPage(elemPerPg);
+        page.setSearch(name);
+        page.setSortCol(sc);
+        page.setSortType(sortType);
         ResultSet rs = null;
         try {
             connection = ConnectionMySQL.INSTANCE.getConnection();
-            rs = connection.prepareStatement(String.format(LISTALL, pageNb * elemPerPg, elemPerPg)).executeQuery();
-            page = new Page<>();
-            page.setPageNumber(pageNb);
+            PreparedStatement stmt = connection.prepareStatement(String.format(ComputerDAO.LISTALL_ORDERED, sc + ((sortType == SortType.ASC) ? " ASC " : " DESC ")));
+            stmt.setString(1, "%" + name + "%");
+            stmt.setInt(2, pageNb * elemPerPg);
+            stmt.setInt(3, elemPerPg);
+            rs = stmt.executeQuery();
             while (rs.next()) {
                 Computer computer = new Computer();
                 Company company = new Company();
@@ -343,7 +346,9 @@ public enum ComputerDAO implements DAO<Computer> {
         } finally {
             try {
                 connection.close();
-                rs.close();
+                if (rs != null) {
+                    rs.close();
+                }
             } catch (SQLException e) {
                 throw new DAOException("Fail to close the connection", e);
             }

@@ -8,6 +8,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.excilys.cdb.model.dto.ComputerDTO;
 import com.excilys.cdb.model.entities.Computer;
 import com.excilys.cdb.model.entities.Page;
 
@@ -22,13 +23,13 @@ public class ComputerServiceTest {
 
     @Test
     public void getById() {
-        Computer computer = service.getById((long) 1);
+        ComputerDTO computer = service.getById((long) 1);
         assertNotNull(computer);
     }
 
     @Test
     public void index() {
-        Page<Computer> computers = service.index(1, 20);
+        Page<ComputerDTO> computers = service.index(1, 20);
         assertNotNull(computers);
         assertEquals(computers.getEntities().size(), 20);
     }
@@ -37,7 +38,7 @@ public class ComputerServiceTest {
     public void createUpdateDelete() {
         int countBefore, countAfter;
 
-        Computer origin = new Computer();
+        ComputerDTO origin = new ComputerDTO();
         origin.setName("A cool Computer");
 
         // we test if create actually adds an element
@@ -48,7 +49,7 @@ public class ComputerServiceTest {
         assertEquals(countBefore + 1, countAfter);
 
         // we test if getById returns the good element
-        Computer db = service.getById(id);
+        ComputerDTO db = service.getById(id);
 
         assertEquals(db.getIntroduced(), origin.getIntroduced());
         assertEquals(db.getDiscontinued(), origin.getDiscontinued());
@@ -66,7 +67,7 @@ public class ComputerServiceTest {
         assertEquals(countBefore, countAfter);
 
         // we test if update actually updated the element
-        Computer db2 = service.getById(db.getId());
+        ComputerDTO db2 = service.getById(db.getId());
 
         assertEquals(db.getName(), db2.getName());
         assertEquals(db.getIntroduced(), db2.getIntroduced());

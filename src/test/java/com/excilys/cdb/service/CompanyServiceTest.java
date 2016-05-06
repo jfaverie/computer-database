@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.excilys.cdb.model.dto.CompanyDTO;
 import com.excilys.cdb.model.entities.Company;
 import com.excilys.cdb.model.entities.Page;
 
@@ -14,18 +15,18 @@ public class CompanyServiceTest {
 
     @Before
     public void setUp() throws Exception {
-        service = CompanyService.getInstance();
+        service = CompanyService.INSTANCE;
     }
 
     @Test
     public void getById() {
-        Company company = service.getById((long) 1);
+        CompanyDTO company = service.getById((long) 1);
         assertNotNull(company);
     }
 
     @Test
     public void index() {
-        Page<Company> companies = service.index(1, 20);
+        Page<CompanyDTO> companies = service.index(1, 20);
         assertNotNull(companies);
         assertEquals(companies.getEntities().size(), 20);
     }
@@ -34,7 +35,7 @@ public class CompanyServiceTest {
     public void createUpdateDelete() {
         int countBefore, countAfter;
 
-        Company origin = new Company();
+        CompanyDTO origin = new CompanyDTO();
         origin.setName("A cool Company");
 
         //we test if create actually adds an element
@@ -45,7 +46,7 @@ public class CompanyServiceTest {
         assertEquals(countBefore + 1, countAfter);
 
         //we test if getById returns the good element
-        Company db = service.getById(id);
+        CompanyDTO db = service.getById(id);
 
         assertEquals(db.getName(), origin.getName());
 

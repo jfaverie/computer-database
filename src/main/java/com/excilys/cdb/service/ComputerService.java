@@ -1,13 +1,12 @@
 package com.excilys.cdb.service;
 
-import java.sql.Connection;
-
 import com.excilys.cdb.model.dao.ComputerDAO;
 import com.excilys.cdb.model.dto.ComputerDTO;
 import com.excilys.cdb.model.entities.Computer;
 import com.excilys.cdb.model.entities.Page;
-import com.excilys.cdb.model.jdbc.ConnectionMySQL;
 import com.excilys.cdb.model.mappers.ComputerMapper;
+import com.excilys.cdb.resources.SortColumn;
+import com.excilys.cdb.resources.SortType;
 
 public enum ComputerService {
 
@@ -33,7 +32,11 @@ public enum ComputerService {
      * @return a page of computers
      */
     public Page<ComputerDTO> index(int pageNb, int elemPerPg) {
-        return ComputerMapper.convertList(COMPUTERDAO.index(pageNb, elemPerPg));
+        return ComputerMapper.convertPageToDTO(COMPUTERDAO.index(pageNb, elemPerPg));
+    }
+    
+    public Page<ComputerDTO> indexSort(int pageNb, int elemPerPg, SortColumn sc, SortType sortType, String name) {
+        return ComputerMapper.convertPageToDTO(COMPUTERDAO.indexSort(pageNb, elemPerPg, sc, sortType, name));
     }
 
     /**

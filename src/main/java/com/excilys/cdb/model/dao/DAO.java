@@ -64,9 +64,10 @@ public interface DAO<T> {
      */
     public abstract Page<T> index(int pageNb, int elemPerPg);
 
-    public abstract Page<T> indexSort(int pageNb, int elemPerPg, SortColumn sc, SortType sortType);
+    public abstract Page<T> indexSort(int pageNb, int elemPerPg, SortColumn sc, SortType sortType, String name);
 
     public abstract void delete(long companyId, Connection connection);
+
 
 
 }

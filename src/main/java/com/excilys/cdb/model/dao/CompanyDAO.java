@@ -1,6 +1,7 @@
 package com.excilys.cdb.model.dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -8,6 +9,7 @@ import java.sql.SQLException;
 import org.slf4j.LoggerFactory;
 
 import com.excilys.cdb.model.entities.Company;
+import com.excilys.cdb.model.entities.Computer;
 import com.excilys.cdb.model.entities.Page;
 import com.excilys.cdb.model.exception.DAOException;
 import com.excilys.cdb.model.jdbc.ConnectionMySQL;
@@ -25,6 +27,7 @@ public enum CompanyDAO implements DAO<Company> {
     private static final String UPDATE = "UPDATE company SET name= ? WHERE id = ?;";
     private static final String DELETE = "DELETE FROM company WHERE id = ?;";
     private static final String LISTALL = "SELECT id,name from company LIMIT %d, %d;";
+    private static final String LISTALL_ORDERED = "SELECT id,name from company LIMIT %d, %d;";
     private static final String COUNT = "SELECT COUNT(*) FROM company";
 
     @Override
@@ -234,9 +237,51 @@ public enum CompanyDAO implements DAO<Company> {
     }
 
     @Override
-    public Page<Company> indexSort(int pageNb, int elemPerPg, SortColumn sc, SortType sortType) {
-        // TODO Auto-generated method stub
-        return null;
+    public Page<Company> indexSort(int pageNb, int elemPerPg, SortColumn sc, SortType sortType, String name) {
+        Page<Company> page = new Page<>();
+        Connection connection = null;
+        page.setPageNumber(pageNb);
+        page.setElementPerPage(elemPerPg);
+        ResultSet rs = null;
+        try {
+            connection = ConnectionMySQL.INSTANCE.getConnection();
+            PreparedStatement stmt = connection.prepareStatement(
+                    String.format(LISTALL_ORDERED,
+                            (sc.ordinal() + 1) + ((sortType == SortType.ASC) ? " ASC " : " DESC ")),
+                    pageNb * elemPerPg, elemPerPg);
+            stmt.setString(1, "%" + name + "%");
+            rs = stmt.executeQuery();
+            page = new Page<>();
+            page.setPageNumber(pageNb);
+            page.setSortCol(sc);
+            page.setSortType(sortType);
+            page.setSearch(name);
+            while (rs.next()) {
+                Company company = new Company();
+                company.setId(rs.getLong("id"));
+                company.setName(rs.getString("name"));
+                page.addEntity(company);
+            }
+            rs.close();
+            rs = connection.prepareStatement(String.format(COUNT, pageNb * elemPerPg, elemPerPg)).executeQuery();
+            rs.next();
+
+            page.setTotalElements(rs.getInt(1));
+
+        } catch (
+
+        SQLException e) {
+            throw new DAOException("Fail to get all companies", e);
+        } finally {
+            try {
+                rs.close();
+                connection.close();
+            } catch (SQLException e) {
+                throw new DAOException("Fail to get all companies", e);
+            }
+
+        }
+        return page;
     }
 
 }
