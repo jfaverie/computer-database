@@ -12,6 +12,7 @@ import com.excilys.cdb.model.entities.Company;
 import com.excilys.cdb.model.entities.Computer;
 import com.excilys.cdb.model.entities.Page;
 import com.excilys.cdb.model.exception.DAOException;
+import com.excilys.cdb.model.jdbc.ConnectionManager;
 import com.excilys.cdb.model.jdbc.ConnectionMySQL;
 import com.excilys.cdb.resources.SortColumn;
 import com.excilys.cdb.resources.SortType;
@@ -29,6 +30,12 @@ public enum CompanyDAO implements DAO<Company> {
     private static final String LISTALL = "SELECT id,name from company LIMIT %d, %d;";
     private static final String LISTALL_ORDERED = "SELECT id,name from company LIMIT %d, %d;";
     private static final String COUNT = "SELECT COUNT(*) FROM company";
+
+    private final ConnectionManager manager;
+
+    private CompanyDAO() {
+        manager = ConnectionManager.getInstance();
+    }
 
     @Override
     public Company findById(long id) {
@@ -173,19 +180,15 @@ public enum CompanyDAO implements DAO<Company> {
 
     }
 
-    @Override
-    public void delete(long companyId, Connection connection) {
+    
+    public void deleteWithLocalThread(long companyId) {
+        Connection connection = manager.getConnection();
+
         try {
             PreparedStatement stmt = connection.prepareStatement(DELETE);
             stmt.setLong(1, companyId);
             stmt.executeUpdate();
-            if (stmt.executeUpdate() > 1) {
-                CompanyDAO.LOGGER.info("Delete a company");
-            } else {
-                CompanyDAO.LOGGER.warn("Fail to delete a company");
-            }
         } catch (SQLException e) {
-            CompanyDAO.LOGGER.error(e.getMessage());
             throw new DAOException("Fail to delete a company", e);
         } finally {
             try {
@@ -217,7 +220,7 @@ public enum CompanyDAO implements DAO<Company> {
                 page.addEntity(company);
             }
             rs.close();
-            rs = connection.prepareStatement(String.format(COUNT, pageNb * elemPerPg, elemPerPg)).executeQuery();
+            rs = connection.prepareStatement(COUNT).executeQuery();
             rs.next();
 
             page.setTotalElements(rs.getInt(1));
@@ -263,7 +266,7 @@ public enum CompanyDAO implements DAO<Company> {
                 page.addEntity(company);
             }
             rs.close();
-            rs = connection.prepareStatement(String.format(COUNT, pageNb * elemPerPg, elemPerPg)).executeQuery();
+            rs = connection.prepareStatement(COUNT).executeQuery();
             rs.next();
 
             page.setTotalElements(rs.getInt(1));
@@ -282,6 +285,12 @@ public enum CompanyDAO implements DAO<Company> {
 
         }
         return page;
+    }
+
+    @Override
+    public void deleteByCompany(long companyId) {
+        // TODO Auto-generated method stub
+        
     }
 
 }

@@ -34,7 +34,7 @@ public enum ComputerService {
     public Page<ComputerDTO> index(int pageNb, int elemPerPg) {
         return ComputerMapper.convertPageToDTO(COMPUTERDAO.index(pageNb, elemPerPg));
     }
-    
+
     public Page<ComputerDTO> indexSort(int pageNb, int elemPerPg, SortColumn sc, SortType sortType, String name) {
         return ComputerMapper.convertPageToDTO(COMPUTERDAO.indexSort(pageNb, elemPerPg, sc, sortType, name));
     }

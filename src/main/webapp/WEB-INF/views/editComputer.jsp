@@ -38,24 +38,30 @@
 						<input type="hidden" name="id" value="${computer.id}" />
 						<fieldset>
 							<div class="form-group">
-								<label for="computerName">Computer name</label> <input
+								<label for="computerName">Computer name</label> 
+								<input
 									type="text" class="form-control" id="computerName"
-									placeholder="Computer name" value="${computer.name}">
+									name="computerName" placeholder="Computer name"
+									value="${computer.name}">
 							</div>
 							<div class="form-group">
-								<label for="introduced">Introduced date</label> <input
-									type="date" class="form-control" id="introduced"
-									placeholder="Introduced date" value="${computer.introduced}">
+								<label for="introduced">Introduced date</label> 
+								<input
+									type="date" name="introduced" class="form-control"
+									id="introduced" placeholder="Introduced date"
+									value="${computer.introduced}">
 							</div>
 							<div class="form-group">
-								<label for="discontinued">Discontinued date</label> <input
-									type="date" class="form-control" id="discontinued"
-									placeholder="Discontinued date"
+								<label for="discontinued">Discontinued date</label> 
+								<input
+									type="date" name="discontinued" class="form-control"
+									id="discontinued" placeholder="Discontinued date"
 									value="${computer.discontinued}">
 							</div>
 							<div class="form-group">
-								<label for="companyId">Company</label> <select
-									class="form-control" id="companyId">
+								<label for="companyId">Company</label> 
+								<select
+									class="form-control" id="companyId" name="companyId">
 									<c:forEach items="${companies}" var="company">
 										<c:choose>
 											<c:when test="${computer.company.id eq company.id}">

@@ -46,12 +46,10 @@ public interface DAO<T> {
 
     /**
      * Suppress an entry on the DB.
-     * 
      * @param id
      *            the id of the object
      */
     public abstract void delete(long id);
-
 
     /**
      * Get a list of Objects.
@@ -66,7 +64,8 @@ public interface DAO<T> {
 
     public abstract Page<T> indexSort(int pageNb, int elemPerPg, SortColumn sc, SortType sortType, String name);
 
-    public abstract void delete(long companyId, Connection connection);
+    public abstract void deleteByCompany(long companyId);
+
 
 
 

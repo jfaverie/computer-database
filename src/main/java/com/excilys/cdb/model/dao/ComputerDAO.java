@@ -11,6 +11,7 @@ import com.excilys.cdb.model.entities.Company;
 import com.excilys.cdb.model.entities.Computer;
 import com.excilys.cdb.model.entities.Page;
 import com.excilys.cdb.model.exception.DAOException;
+import com.excilys.cdb.model.jdbc.ConnectionManager;
 import com.excilys.cdb.model.jdbc.ConnectionMySQL;
 import com.excilys.cdb.resources.SortColumn;
 import com.excilys.cdb.resources.SortType;
@@ -28,7 +29,14 @@ public enum ComputerDAO implements DAO<Computer> {
     private static final String LISTALL = "SELECT cr.id, cr.name, cr.introduced, cr.discontinued, cy.id company_id, cy.name company_name FROM computer cr LEFT JOIN company cy on cr.company_id = cy.id LIMIT %d, %d;";
     private static final String LISTALL_ORDERED = "SELECT cr.id, cr.name, cr.introduced, cr.discontinued, cy.id company_id, cy.name company_name FROM computer cr LEFT JOIN company cy on cr.company_id = cy.id WHERE cr.name LIKE ? ORDER BY %s LIMIT ?, ?;";
     private static final String COUNT = "SELECT COUNT(*) FROM computer";
+    private static final String COUNT_ORDERED = "SELECT COUNT(*) FROM computer cr LEFT JOIN company cy ON cr.company_id = cy.id WHERE cr.name LIKE ? OR cy.name LIKE ?";
     private static final String LISTID = "SELECT id FROM company";
+
+    private final ConnectionManager manager;
+
+    private ComputerDAO() {
+        manager = ConnectionManager.getInstance();
+    }
 
     @Override
     public Computer findById(long id) {
@@ -59,16 +67,11 @@ public enum ComputerDAO implements DAO<Computer> {
                 company.setName(companyname);
                 computer.setCompany(company);
             }
+            stmt.close();
+            connection.close();
         } catch (SQLException e) {
             throw new DAOException("Fail to find a computer by id", e);
-        } finally {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                throw new DAOException("Fail to close the connection", e);
-            }
-
-        }
+        } 
         return computer;
     }
 
@@ -106,8 +109,8 @@ public enum ComputerDAO implements DAO<Computer> {
             throw new DAOException("Fail to find a computer by name", e);
         } finally {
             try {
-                connection.close();
                 rs.close();
+                connection.close();
             } catch (SQLException e) {
                 throw new DAOException("Fail to close the connection", e);
             }
@@ -229,22 +232,15 @@ public enum ComputerDAO implements DAO<Computer> {
     }
     
     @Override
-    public void delete(long id, Connection connection) {
+    public void deleteByCompany(long id) {
+        Connection connection = manager.getConnection();
         try {
             PreparedStatement stmt = connection.prepareStatement(DELETE_BY_COMPANY);
             stmt.setLong(1, id);
             stmt.executeUpdate();
         } catch (SQLException e) {
             throw new DAOException("Fail to delete a computer", e);
-        } finally {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                throw new DAOException("Fail to close the connection", e);
-            }
         }
-
-        
     }
 
     @Override
@@ -280,7 +276,7 @@ public enum ComputerDAO implements DAO<Computer> {
                 page.addEntity(computer);
             }
             rs.close();
-            rs = connection.prepareStatement(String.format(COUNT, pageNb * elemPerPg, elemPerPg)).executeQuery();
+            rs = connection.prepareStatement(COUNT).executeQuery();
             rs.next();
             page.setTotalElements(rs.getInt(1));
 
@@ -308,11 +304,17 @@ public enum ComputerDAO implements DAO<Computer> {
         page.setSortType(sortType);
         ResultSet rs = null;
         try {
+            PreparedStatement stmt = null;
             connection = ConnectionMySQL.INSTANCE.getConnection();
-            PreparedStatement stmt = connection.prepareStatement(String.format(ComputerDAO.LISTALL_ORDERED, sc + ((sortType == SortType.ASC) ? " ASC " : " DESC ")));
-            stmt.setString(1, "%" + name + "%");
-            stmt.setInt(2, pageNb * elemPerPg);
-            stmt.setInt(3, elemPerPg);
+            if (!name.isEmpty()) {
+                stmt = connection.prepareStatement(String.format(LISTALL_ORDERED, sc + ((sortType == SortType.ASC) ? " ASC " : " DESC ")));
+                stmt.setString(1, "%" + name + "%");
+                stmt.setInt(2, pageNb * elemPerPg);
+                stmt.setInt(3, elemPerPg);
+            } else {
+                stmt = connection.prepareStatement(String.format(LISTALL, pageNb * elemPerPg, elemPerPg));
+            }
+
             rs = stmt.executeQuery();
             while (rs.next()) {
                 Computer computer = new Computer();
@@ -336,8 +338,16 @@ public enum ComputerDAO implements DAO<Computer> {
                 }
                 page.addEntity(computer);
             }
+            stmt.close();
             rs.close();
-            rs = connection.prepareStatement(String.format(COUNT, pageNb * elemPerPg, elemPerPg)).executeQuery();
+            if (!name.isEmpty()) {
+                stmt = connection.prepareStatement(COUNT_ORDERED);
+                stmt.setString(1, name + "%");
+                stmt.setString(2, name + "%");
+            } else {
+                stmt = connection.prepareStatement(COUNT);
+            }
+            rs = stmt.executeQuery();
             rs.next();
             page.setTotalElements(rs.getInt(1));
 

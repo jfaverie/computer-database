@@ -50,7 +50,8 @@
 									placeholder="Discontinued date" name="discontinued">
 							</div>
 							<div class="form-group">
-								<label for="companyId">Company</label> <select
+								<label for="companyId">Company</label> 
+								<select
 									class="form-control" class="dropdown-menu" id="companyId"
 									name="companyId">
 									<c:forEach items="${companies}" var="company">

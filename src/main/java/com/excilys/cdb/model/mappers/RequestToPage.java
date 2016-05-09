@@ -31,7 +31,7 @@ public enum RequestToPage {
         }
 
         try {
-            limit = Integer.parseInt(request.getParameter("limit"));
+            limit = Integer.parseInt(request.getParameter("nbel"));
             session.setAttribute("limit", limit);
         } catch (NumberFormatException ignored) {
             limit = 10;
@@ -63,6 +63,7 @@ public enum RequestToPage {
 
         request.setAttribute("nbComputers", computers.getTotalElements());
         request.setAttribute("currentPage", computers.getPageNumber());
+        request.setAttribute("limit", computers.getElementPerPage());
         request.setAttribute("nbPage",
                 (int) Math.ceil(computers.getTotalElements() / (double) computers.getElementPerPage()));
         request.setAttribute("computers", computers.getEntities());

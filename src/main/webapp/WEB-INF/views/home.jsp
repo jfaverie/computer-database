@@ -25,7 +25,7 @@
 	<header class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<mylib:link msg="Application - Database" classRef="navbar-brand"
-				context="" cursor="0" offset="10" search="" sortType="0" sortCol="0" />
+				context="" cursor="0" limit="10" search="" sortType="0" sortCol="0" />
 		</div>
 	</header>
 
@@ -45,7 +45,7 @@
 				<div class="pull-right">
 					<mylib:link msg="Add Computer" idRef="addComputer"
 						classRef="btn btn-success" context="addComputer" cursor="0"
-						offset="10" search="" sortType="0" sortCol="0" />
+						limit="10" search="" sortType="0" sortCol="0" />
 					<a class="btn btn-default" id="editComputer" href="#"
 						onclick="$.fn.toggleEditMode();">Edit</a>
 				</div>
@@ -72,25 +72,25 @@
 						</span></th>
 						<th><mylib:link context="" msg="Computer name"
 								cursor="${currentPage}"
-								offset="${nbPage}"
+								limit="${limit}"
 								search="${search}" 
 								sortCol="1"
 								sortType="${computerSort}" /></th>
 						<th><mylib:link context="" msg="Introduced date"
 								cursor="${currentPage}"
-								offset="${nbPage}"
+								limit="${limit}"
 								search="${search}" 
 								sortCol="2"
 								sortType="${introSort}" /></th>
 						<th><mylib:link context="" msg="Discontinued date"
 								cursor="${currentPage}"
-								offset="${nbPage}"
+								limit="${limit}"
 								search="${search}" 
 								sortCol="3"
 								sortType="${discoSort}" /></th>
 						<th><mylib:link context="" msg="Company"
 								cursor="${currentPage}"
-								offset="${nbPage}"
+								limit="${limit}"
 								search="${search}" 
 								sortCol="4"
 								sortType="${companySort}" /></th>
@@ -116,7 +116,7 @@
 
 	<footer class="navbar-fixed-bottom">
 		<div class="container text-center">
-			<mylib:pagination currentPage="${currentPage}" offset="${nbPage}" nbPage="${nbPage}" search="${search}" sortType="${sortType}" sortCol="${sortCol}"/>
+			<mylib:pagination currentPage="${currentPage}" limit="${limit}" nbPage="${nbPage}" search="${search}" sortType="${sortType}" sortCol="${sortCol}"/>
 			<div class="btn-group btn-group-sm pull-right" role="group">
 				<button onclick="self.location.href='?page=0&nbel=10'" type="button"
 					class="btn btn-default">10</button>

@@ -26,6 +26,9 @@ public enum CompanyMapper {
         for (Company company : companies.getEntities()) {
             companiesDTO.addEntity(CompanyDTO.getBuilder().id(company.getId()).name(company.getName()).build());
         }
+        companiesDTO.setElementPerPage(companies.getElementPerPage());
+        companiesDTO.setPageNumber(companies.getPageNumber());
+        companiesDTO.setTotalElements(companies.getTotalElements());
         return companiesDTO;
     }
 

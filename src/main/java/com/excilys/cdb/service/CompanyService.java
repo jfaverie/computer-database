@@ -9,14 +9,20 @@ import com.excilys.cdb.model.dto.CompanyDTO;
 import com.excilys.cdb.model.entities.Company;
 import com.excilys.cdb.model.entities.Page;
 import com.excilys.cdb.model.exception.DAOException;
+import com.excilys.cdb.model.jdbc.ConnectionManager;
 import com.excilys.cdb.model.jdbc.ConnectionMySQL;
 import com.excilys.cdb.model.mappers.CompanyMapper;
 
 public enum CompanyService {
-    
+
     INSTANCE;
     private static final CompanyDAO COMPANYDAO = CompanyDAO.INSTANCE;
     private static final ComputerDAO COMPUTERDAO = ComputerDAO.INSTANCE;
+    private final ConnectionManager manager;
+
+    private CompanyService() {
+        manager = ConnectionManager.getInstance();
+    }
 
     /**
      * Return a company from an id.
@@ -66,25 +72,16 @@ public enum CompanyService {
      *            the id of the company to delete
      */
     public void delete(Long id) {
-        Connection connection = ConnectionMySQL.INSTANCE.getConnection();
+        Connection connection = manager.getConnection();
         try {
-            connection.setAutoCommit(false);
-            COMPUTERDAO.delete(id, connection);
-            COMPANYDAO.delete(id);
-        } catch (DAOException | SQLException e) {
-            try {
-                connection.rollback();
-            } catch (SQLException e2) {
-                throw new DAOException(e2);
-            }
+            manager.initTransaction(connection);
+            COMPUTERDAO.deleteByCompany(id);
+            COMPANYDAO.deleteWithLocalThread(id);
+        } catch (DAOException e) {
+            manager.rollback(connection);
         } finally {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                throw new DAOException("Fail to close the connection", e);
-            }
+            manager.close(connection);
         }
     }
-
 
 }
