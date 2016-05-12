@@ -306,14 +306,14 @@ public enum ComputerDAO implements DAO<Computer> {
         try {
             PreparedStatement stmt = null;
             connection = ConnectionMySQL.INSTANCE.getConnection();
-            if (!name.isEmpty()) {
+           // if (!name.isEmpty()) {
                 stmt = connection.prepareStatement(String.format(LISTALL_ORDERED, sc + ((sortType == SortType.ASC) ? " ASC " : " DESC ")));
                 stmt.setString(1, "%" + name + "%");
                 stmt.setInt(2, pageNb * elemPerPg);
                 stmt.setInt(3, elemPerPg);
-            } else {
+/*            } else {
                 stmt = connection.prepareStatement(String.format(LISTALL, pageNb * elemPerPg, elemPerPg));
-            }
+            }*/
 
             rs = stmt.executeQuery();
             while (rs.next()) {
