@@ -1,0 +1,1934 @@
+17:46:12.190 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+17:46:12.200 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+17:46:12.200 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+17:46:12.200 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+17:46:12.200 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+17:46:12.200 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+17:46:12.201 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+17:46:12.201 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+17:46:12.201 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+17:46:12.201 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+17:46:12.201 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+17:46:12.201 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+17:46:12.201 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+17:46:12.201 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+17:46:12.201 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+17:46:12.202 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+17:46:12.202 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+17:46:12.202 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+17:46:12.202 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+17:46:12.202 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+17:46:12.202 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+17:46:12.202 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+17:46:12.202 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+17:46:12.202 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+17:46:12.202 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+17:46:12.202 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+17:46:12.202 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+17:46:12.203 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+17:46:12.203 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+17:46:12.203 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+17:46:12.203 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+17:46:12.203 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+17:46:12.203 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+17:46:12.203 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+17:46:12.422 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@419bc7f1
+17:49:01.402 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+17:49:01.409 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+17:49:01.409 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+17:49:01.409 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+17:49:01.409 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+17:49:01.409 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+17:49:01.409 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+17:49:01.410 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+17:49:01.410 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+17:49:01.410 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+17:49:01.410 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+17:49:01.410 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+17:49:01.410 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+17:49:01.410 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+17:49:01.410 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+17:49:01.410 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+17:49:01.410 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+17:49:01.410 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+17:49:01.410 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+17:49:01.410 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+17:49:01.410 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+17:49:01.410 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+17:49:01.411 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+17:49:01.411 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+17:49:01.411 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+17:49:01.411 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+17:49:01.411 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+17:49:01.411 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+17:49:01.411 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+17:49:01.411 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+17:49:01.411 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+17:49:01.411 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+17:49:01.411 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+17:49:01.411 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+17:49:01.603 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@419bc7f1
+17:51:42.151 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+17:51:42.160 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+17:51:42.160 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+17:51:42.161 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+17:51:42.161 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+17:51:42.161 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+17:51:42.161 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+17:51:42.161 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+17:51:42.161 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+17:51:42.161 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+17:51:42.161 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+17:51:42.161 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+17:51:42.161 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+17:51:42.161 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+17:51:42.162 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+17:51:42.162 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+17:51:42.162 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+17:51:42.162 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+17:51:42.162 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+17:51:42.162 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+17:51:42.162 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+17:51:42.162 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+17:51:42.162 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+17:51:42.162 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+17:51:42.162 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+17:51:42.163 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+17:51:42.163 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+17:51:42.163 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+17:51:42.163 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+17:51:42.163 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+17:51:42.163 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+17:51:42.163 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+17:51:42.163 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+17:51:42.163 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+17:51:42.381 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@419bc7f1
+17:52:41.542 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+17:52:41.549 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+17:52:41.549 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+17:52:41.549 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+17:52:41.550 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+17:52:41.550 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+17:52:41.550 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+17:52:41.550 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+17:52:41.550 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+17:52:41.550 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+17:52:41.550 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+17:52:41.550 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+17:52:41.550 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+17:52:41.550 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+17:52:41.550 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+17:52:41.550 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+17:52:41.550 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+17:52:41.550 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+17:52:41.550 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+17:52:41.550 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+17:52:41.551 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+17:52:41.551 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+17:52:41.551 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+17:52:41.551 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+17:52:41.551 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+17:52:41.551 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+17:52:41.551 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+17:52:41.551 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+17:52:41.551 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+17:52:41.551 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+17:52:41.551 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+17:52:41.551 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+17:52:41.551 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+17:52:41.551 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+17:52:41.741 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@419bc7f1
+17:53:06.440 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+17:53:06.450 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+17:53:06.451 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+17:53:06.451 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+17:53:06.451 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+17:53:06.451 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+17:53:06.451 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+17:53:06.451 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+17:53:06.451 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+17:53:06.451 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+17:53:06.451 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+17:53:06.452 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+17:53:06.452 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+17:53:06.452 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+17:53:06.452 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+17:53:06.452 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+17:53:06.452 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+17:53:06.452 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+17:53:06.452 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+17:53:06.452 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+17:53:06.452 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+17:53:06.452 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+17:53:06.452 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+17:53:06.452 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+17:53:06.453 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+17:53:06.453 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+17:53:06.453 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+17:53:06.453 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+17:53:06.453 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+17:53:06.453 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+17:53:06.453 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+17:53:06.453 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+17:53:06.453 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+17:53:06.453 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+17:53:06.657 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@419bc7f1
+17:53:13.895 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+17:53:13.910 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+17:53:13.910 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+17:53:13.910 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+17:53:13.910 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+17:53:13.910 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+17:53:13.910 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+17:53:13.910 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+17:53:13.910 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+17:53:13.910 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+17:53:13.911 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+17:53:13.911 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+17:53:13.911 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+17:53:13.911 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+17:53:13.911 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+17:53:13.911 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+17:53:13.911 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+17:53:13.911 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+17:53:13.911 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+17:53:13.911 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+17:53:13.911 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+17:53:13.912 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+17:53:13.912 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+17:53:13.912 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+17:53:13.912 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+17:53:13.912 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+17:53:13.912 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+17:53:13.912 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+17:53:13.912 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+17:53:13.912 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+17:53:13.912 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+17:53:13.912 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+17:53:13.912 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+17:53:13.912 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+17:53:14.131 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5b8356e3
+17:53:14.223 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+17:53:14.227 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@71b44655
+17:53:14.230 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6fbd87c9
+17:53:14.233 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@354e31c6
+17:53:14.236 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@2048f757
+17:53:14.238 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5fb2ddf
+17:53:14.241 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6440a31f
+17:53:14.244 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@28553f0e
+17:53:14.247 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@14247795
+17:53:14.249 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6b6325a7
+17:53:14.250 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+17:53:44.224 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:54:14.225 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:54:14.953 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+17:54:14.965 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+17:54:14.966 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+17:54:14.966 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+17:54:14.966 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+17:54:14.966 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+17:54:14.966 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+17:54:14.966 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+17:54:14.966 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+17:54:14.966 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+17:54:14.966 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+17:54:14.966 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+17:54:14.966 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+17:54:14.967 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+17:54:14.967 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+17:54:14.967 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+17:54:14.967 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+17:54:14.967 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+17:54:14.967 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+17:54:14.967 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+17:54:14.967 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+17:54:14.967 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+17:54:14.967 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+17:54:14.967 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+17:54:14.967 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+17:54:14.968 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+17:54:14.968 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+17:54:14.968 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+17:54:14.968 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+17:54:14.968 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+17:54:14.968 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+17:54:14.968 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+17:54:14.968 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+17:54:14.968 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+17:54:15.217 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@2495dd34
+17:54:15.300 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+17:54:15.305 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@482f316a
+17:54:15.310 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@795e16ad
+17:54:15.316 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@64cebcd1
+17:54:15.321 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6dfc826
+17:54:15.326 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5a98affe
+17:54:15.330 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@e842a37
+17:54:15.333 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@201bf26d
+17:54:15.337 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7cf9e43a
+17:54:15.340 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@10218b2c
+17:54:15.340 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+17:54:28.839 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+17:54:28.851 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+17:54:28.851 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+17:54:28.851 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+17:54:28.851 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+17:54:28.851 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+17:54:28.851 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+17:54:28.851 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+17:54:28.851 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+17:54:28.851 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+17:54:28.851 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+17:54:28.851 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+17:54:28.852 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+17:54:28.852 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+17:54:28.852 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+17:54:28.852 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+17:54:28.852 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+17:54:28.852 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+17:54:28.852 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+17:54:28.852 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+17:54:28.852 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+17:54:28.852 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+17:54:28.852 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+17:54:28.852 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+17:54:28.853 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+17:54:28.853 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+17:54:28.853 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+17:54:28.853 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+17:54:28.853 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+17:54:28.853 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+17:54:28.853 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+17:54:28.853 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+17:54:28.853 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+17:54:28.853 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+17:54:29.065 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5dc74f84
+17:54:29.153 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+17:54:29.158 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@598a2dce
+17:54:29.164 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1cecbe0f
+17:54:29.168 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1d4f8818
+17:54:29.171 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7d34fe70
+17:54:29.175 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7a05f093
+17:54:29.179 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1272eb79
+17:54:29.182 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@28cbc87f
+17:54:29.186 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@11285c66
+17:54:29.189 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@705ead2d
+17:54:29.189 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+17:54:44.226 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:54:45.301 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:54:59.155 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:55:14.014 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+17:55:14.024 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+17:55:14.024 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+17:55:14.024 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+17:55:14.024 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+17:55:14.025 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+17:55:14.025 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+17:55:14.025 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+17:55:14.025 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+17:55:14.025 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+17:55:14.025 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+17:55:14.025 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+17:55:14.025 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+17:55:14.025 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+17:55:14.025 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+17:55:14.025 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+17:55:14.025 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+17:55:14.025 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+17:55:14.025 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+17:55:14.026 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+17:55:14.026 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+17:55:14.026 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+17:55:14.026 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+17:55:14.026 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+17:55:14.026 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+17:55:14.026 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+17:55:14.026 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+17:55:14.026 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+17:55:14.026 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+17:55:14.026 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+17:55:14.026 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+17:55:14.026 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+17:55:14.026 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+17:55:14.026 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+17:55:14.226 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:55:14.244 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5b8356e3
+17:55:14.333 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+17:55:14.339 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@9a4ef77
+17:55:14.348 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6fbd87c9
+17:55:14.353 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@354e31c6
+17:55:14.359 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@2048f757
+17:55:14.365 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5fb2ddf
+17:55:14.371 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6440a31f
+17:55:14.375 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@38629ab
+17:55:14.381 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@d93ba62
+17:55:14.385 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@14247795
+17:55:14.385 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+17:55:15.302 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:55:25.448 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+17:55:25.458 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+17:55:25.459 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+17:55:25.459 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+17:55:25.459 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+17:55:25.459 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+17:55:25.459 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+17:55:25.459 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+17:55:25.459 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+17:55:25.459 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+17:55:25.459 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+17:55:25.460 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+17:55:25.460 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+17:55:25.460 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+17:55:25.460 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+17:55:25.460 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+17:55:25.460 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+17:55:25.460 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+17:55:25.460 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+17:55:25.460 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+17:55:25.460 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+17:55:25.460 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+17:55:25.461 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+17:55:25.461 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+17:55:25.461 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+17:55:25.461 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+17:55:25.461 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+17:55:25.461 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+17:55:25.461 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+17:55:25.461 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+17:55:25.461 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+17:55:25.461 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+17:55:25.461 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+17:55:25.461 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+17:55:25.674 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5b8356e3
+17:55:25.768 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+17:55:25.773 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@9a4ef77
+17:55:25.779 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6fbd87c9
+17:55:25.783 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@354e31c6
+17:55:25.786 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@2048f757
+17:55:25.790 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5fb2ddf
+17:55:25.794 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6440a31f
+17:55:25.798 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@38629ab
+17:55:25.802 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@d93ba62
+17:55:25.805 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@14247795
+17:55:25.805 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+17:55:29.156 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:55:44.227 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:55:44.334 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:55:45.302 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:55:50.870 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+17:55:50.881 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+17:55:50.881 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+17:55:50.881 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+17:55:50.881 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+17:55:50.881 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+17:55:50.881 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+17:55:50.881 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+17:55:50.881 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+17:55:50.881 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+17:55:50.881 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+17:55:50.881 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+17:55:50.882 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+17:55:50.882 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+17:55:50.882 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+17:55:50.882 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+17:55:50.882 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+17:55:50.882 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+17:55:50.882 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+17:55:50.882 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+17:55:50.882 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+17:55:50.882 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+17:55:50.882 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+17:55:50.882 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+17:55:50.882 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+17:55:50.882 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+17:55:50.882 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+17:55:50.883 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+17:55:50.883 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+17:55:50.883 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+17:55:50.883 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+17:55:50.883 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+17:55:50.883 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+17:55:50.883 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+17:55:51.095 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5dc74f84
+17:55:51.186 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+17:55:51.191 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7df3e01a
+17:55:51.194 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1cecbe0f
+17:55:51.198 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1d4f8818
+17:55:51.201 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7d34fe70
+17:55:51.204 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7a05f093
+17:55:51.209 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1272eb79
+17:55:51.214 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@64888e06
+17:55:51.218 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@705ead2d
+17:55:51.221 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5ba4b3e4
+17:55:51.221 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+17:55:55.769 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:55:59.156 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:56:14.334 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:56:15.303 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:56:21.187 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:56:25.770 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:56:29.157 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:56:44.335 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:56:45.303 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:56:51.188 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:56:55.770 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:56:59.158 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:57:14.336 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:57:15.304 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:57:21.189 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:57:25.771 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:57:29.158 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:57:44.336 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:57:45.305 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:57:51.190 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:57:55.772 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:57:59.159 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:58:14.337 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:58:15.305 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:58:21.190 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:58:25.772 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:58:29.159 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:58:39.288 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+17:58:39.299 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+17:58:39.299 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+17:58:39.299 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+17:58:39.299 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+17:58:39.299 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+17:58:39.299 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+17:58:39.299 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+17:58:39.299 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+17:58:39.299 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+17:58:39.299 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+17:58:39.300 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+17:58:39.300 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+17:58:39.300 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+17:58:39.300 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+17:58:39.300 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+17:58:39.300 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+17:58:39.300 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+17:58:39.300 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+17:58:39.300 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+17:58:39.300 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+17:58:39.300 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+17:58:39.301 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+17:58:39.301 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+17:58:39.301 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+17:58:39.301 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+17:58:39.301 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+17:58:39.301 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+17:58:39.301 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+17:58:39.301 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+17:58:39.301 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+17:58:39.301 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+17:58:39.301 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+17:58:39.301 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+17:58:39.508 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@2495dd34
+17:58:39.598 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+17:58:39.605 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@de4b93b
+17:58:39.608 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@795e16ad
+17:58:39.611 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@64cebcd1
+17:58:39.614 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6dfc826
+17:58:39.617 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5a98affe
+17:58:39.619 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@e842a37
+17:58:39.622 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@3a5a6967
+17:58:39.625 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@10218b2c
+17:58:39.628 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@35df0d76
+17:58:39.628 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+17:58:44.338 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:58:45.306 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:58:51.191 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:58:55.757 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+17:58:55.764 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+17:58:55.764 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+17:58:55.764 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+17:58:55.764 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+17:58:55.765 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+17:58:55.765 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+17:58:55.765 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+17:58:55.765 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+17:58:55.765 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+17:58:55.765 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+17:58:55.765 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+17:58:55.765 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+17:58:55.765 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+17:58:55.765 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+17:58:55.765 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+17:58:55.765 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+17:58:55.765 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+17:58:55.765 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+17:58:55.765 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+17:58:55.766 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+17:58:55.766 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+17:58:55.766 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+17:58:55.766 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+17:58:55.766 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+17:58:55.766 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+17:58:55.766 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+17:58:55.766 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+17:58:55.766 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+17:58:55.766 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+17:58:55.766 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+17:58:55.766 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+17:58:55.766 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+17:58:55.766 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+17:58:55.773 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:58:55.957 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@419bc7f1
+17:58:59.160 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:58:59.729 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+17:58:59.740 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+17:58:59.740 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+17:58:59.740 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+17:58:59.740 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+17:58:59.740 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+17:58:59.740 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+17:58:59.740 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+17:58:59.740 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+17:58:59.740 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+17:58:59.741 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+17:58:59.741 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+17:58:59.741 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+17:58:59.741 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+17:58:59.741 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+17:58:59.741 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+17:58:59.741 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+17:58:59.741 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+17:58:59.741 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+17:58:59.741 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+17:58:59.741 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+17:58:59.741 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+17:58:59.741 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+17:58:59.742 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+17:58:59.742 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+17:58:59.742 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+17:58:59.742 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+17:58:59.742 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+17:58:59.742 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+17:58:59.742 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+17:58:59.742 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+17:58:59.742 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+17:58:59.742 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+17:58:59.742 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+17:58:59.948 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@2e55aa8d
+17:59:00.038 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+17:59:00.047 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6e101149
+17:59:00.053 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1f71cb85
+17:59:00.059 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6338da74
+17:59:00.064 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@378e6eeb
+17:59:00.069 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@3fda995a
+17:59:00.091 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@67a4a07c
+17:59:00.096 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@239b5074
+17:59:00.102 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7ae9d14e
+17:59:00.107 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7edf31a
+17:59:00.107 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+17:59:09.600 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:59:14.338 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:59:15.306 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:59:21.191 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:59:25.773 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:59:29.160 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:59:30.039 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:59:39.600 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:59:44.339 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:59:45.307 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:59:51.192 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:59:55.774 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:59:59.161 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:00:00.040 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:00:09.601 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:00:14.340 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:00:15.308 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:00:21.193 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:00:25.774 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:00:29.162 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:00:30.041 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:00:39.601 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:00:41.714 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+18:00:41.723 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+18:00:41.724 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+18:00:41.724 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+18:00:41.724 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+18:00:41.724 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+18:00:41.724 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+18:00:41.724 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+18:00:41.724 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+18:00:41.724 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+18:00:41.724 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+18:00:41.724 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+18:00:41.724 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+18:00:41.724 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+18:00:41.724 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+18:00:41.725 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+18:00:41.725 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+18:00:41.725 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+18:00:41.725 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+18:00:41.725 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+18:00:41.725 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+18:00:41.725 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+18:00:41.725 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+18:00:41.725 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+18:00:41.725 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+18:00:41.725 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+18:00:41.725 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+18:00:41.725 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+18:00:41.725 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+18:00:41.726 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+18:00:41.726 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+18:00:41.726 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+18:00:41.726 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+18:00:41.726 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+18:00:41.934 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5dc74f84
+18:00:42.024 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+18:00:42.029 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7df3e01a
+18:00:42.034 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1cecbe0f
+18:00:42.038 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1d4f8818
+18:00:42.041 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7d34fe70
+18:00:42.044 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7a05f093
+18:00:42.048 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1272eb79
+18:00:42.052 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@64888e06
+18:00:42.057 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@705ead2d
+18:00:42.060 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5ba4b3e4
+18:00:42.061 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+18:00:44.340 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:00:45.308 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:00:51.193 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:00:55.775 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:00:59.162 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:01:00.042 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:01:09.602 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:01:12.025 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:01:14.341 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:01:15.309 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:01:21.194 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:01:25.776 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:01:29.163 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:01:30.042 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:01:39.603 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:01:42.026 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:01:44.342 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:01:45.309 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:01:51.194 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:01:55.776 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:01:59.163 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:02:00.043 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:02:09.603 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:02:12.027 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:02:14.303 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+18:02:14.316 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+18:02:14.316 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+18:02:14.316 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+18:02:14.316 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+18:02:14.316 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+18:02:14.316 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+18:02:14.317 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+18:02:14.317 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+18:02:14.317 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+18:02:14.317 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+18:02:14.317 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+18:02:14.317 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+18:02:14.317 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+18:02:14.317 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+18:02:14.317 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+18:02:14.317 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+18:02:14.318 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+18:02:14.318 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+18:02:14.318 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+18:02:14.318 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+18:02:14.318 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+18:02:14.318 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+18:02:14.318 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+18:02:14.318 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+18:02:14.318 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+18:02:14.318 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+18:02:14.318 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+18:02:14.319 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+18:02:14.319 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+18:02:14.319 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+18:02:14.319 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+18:02:14.319 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+18:02:14.319 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+18:02:14.342 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:02:14.535 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5dc74f84
+18:02:14.624 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+18:02:14.629 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7df3e01a
+18:02:14.633 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1cecbe0f
+18:02:14.636 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1d4f8818
+18:02:14.640 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7d34fe70
+18:02:14.644 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7a05f093
+18:02:14.647 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1272eb79
+18:02:14.650 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@64888e06
+18:02:14.653 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@705ead2d
+18:02:14.656 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5ba4b3e4
+18:02:14.656 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+18:02:15.310 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:02:21.195 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:02:25.777 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:02:29.164 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:02:30.043 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:02:39.604 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:02:42.027 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:02:44.342 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:02:44.625 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:02:45.310 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:02:51.196 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:02:55.777 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:02:59.165 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:03:00.044 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:03:09.604 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:03:12.028 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:03:14.343 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:03:14.626 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:03:15.311 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:03:21.196 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:03:25.778 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:03:29.165 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:03:30.045 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:03:39.605 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:03:42.029 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:03:44.344 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:03:44.626 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:03:45.312 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:03:51.197 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:03:55.779 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:03:59.166 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:04:00.045 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:04:09.606 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:04:12.029 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:04:14.344 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:04:14.627 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:04:15.312 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:04:21.197 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:04:25.779 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:04:29.167 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:04:30.046 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:04:39.606 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:04:42.030 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:04:44.345 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:04:44.628 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:04:45.313 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:04:51.198 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:04:55.780 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:04:59.167 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:05:00.047 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:05:09.607 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:05:12.030 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:05:14.346 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:05:14.628 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:05:15.313 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:05:21.199 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:05:25.780 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:05:29.168 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:05:30.047 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:05:39.607 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:05:42.031 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:05:44.346 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:05:44.629 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:05:45.314 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:05:51.199 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:05:55.781 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:05:59.168 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:06:00.048 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:06:09.608 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:06:12.031 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:06:14.347 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:06:14.630 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:06:15.315 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:06:21.200 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:06:25.782 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:06:29.169 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:06:30.048 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:06:39.608 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:06:42.032 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:06:44.348 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:06:44.630 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:06:45.315 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:06:51.201 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:06:55.782 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:06:59.170 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:07:00.049 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:07:09.609 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:07:12.033 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:07:14.348 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:07:14.631 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:07:15.316 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:07:21.201 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:07:25.783 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:07:29.170 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:07:30.049 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:07:39.610 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:07:42.033 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:07:44.349 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:07:44.632 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:07:45.316 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:07:51.202 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:07:55.783 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:07:59.171 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:08:00.050 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:08:09.610 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:08:12.034 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:08:14.349 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:08:14.632 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:08:15.317 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:08:21.203 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:08:25.784 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:08:29.171 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:08:30.051 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:08:39.611 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:08:42.035 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:08:44.350 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:08:44.633 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:08:45.317 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:08:51.203 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:08:55.784 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:08:59.172 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:09:00.051 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:09:09.612 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:09:12.035 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:09:14.350 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:09:14.633 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:09:15.318 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:09:21.204 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:09:25.785 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:09:29.173 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:09:30.052 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:09:39.612 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:09:42.036 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:09:44.351 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:09:44.634 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:09:45.319 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:09:51.204 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:09:55.786 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:09:59.173 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:10:00.053 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:10:04.539 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+18:10:04.550 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+18:10:04.551 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+18:10:04.551 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+18:10:04.551 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+18:10:04.551 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+18:10:04.551 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+18:10:04.551 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+18:10:04.551 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+18:10:04.551 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+18:10:04.551 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+18:10:04.551 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+18:10:04.551 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+18:10:04.551 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+18:10:04.551 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+18:10:04.552 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+18:10:04.552 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+18:10:04.552 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+18:10:04.552 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+18:10:04.552 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+18:10:04.552 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+18:10:04.552 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+18:10:04.552 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+18:10:04.552 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+18:10:04.552 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+18:10:04.552 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+18:10:04.552 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+18:10:04.552 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+18:10:04.552 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+18:10:04.552 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+18:10:04.552 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+18:10:04.553 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+18:10:04.553 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+18:10:04.553 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+18:10:04.760 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5dc74f84
+18:10:04.854 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+18:10:04.859 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7df3e01a
+18:10:04.861 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1cecbe0f
+18:10:04.864 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1d4f8818
+18:10:04.867 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7d34fe70
+18:10:04.869 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7a05f093
+18:10:04.872 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1272eb79
+18:10:04.875 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@64888e06
+18:10:04.879 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@705ead2d
+18:10:04.881 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5ba4b3e4
+18:10:04.881 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+18:10:09.613 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:10:12.036 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:10:14.323 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+18:10:14.332 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+18:10:14.332 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+18:10:14.333 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+18:10:14.333 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+18:10:14.333 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+18:10:14.333 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+18:10:14.333 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+18:10:14.333 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+18:10:14.333 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+18:10:14.333 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+18:10:14.333 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+18:10:14.333 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+18:10:14.333 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+18:10:14.333 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+18:10:14.333 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+18:10:14.333 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+18:10:14.334 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+18:10:14.334 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+18:10:14.334 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+18:10:14.334 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+18:10:14.334 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+18:10:14.334 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+18:10:14.334 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+18:10:14.334 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+18:10:14.334 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+18:10:14.334 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+18:10:14.334 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+18:10:14.334 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+18:10:14.334 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+18:10:14.334 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+18:10:14.334 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+18:10:14.334 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+18:10:14.335 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+18:10:14.352 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:10:14.539 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@2e55aa8d
+18:10:14.631 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=1, active=1, idle=0, waiting=0)
+18:10:14.635 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:10:14.635 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6b672537
+18:10:14.640 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1f71cb85
+18:10:14.644 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6338da74
+18:10:14.647 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@378e6eeb
+18:10:14.651 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@3fda995a
+18:10:14.655 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@67a4a07c
+18:10:14.659 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@239b5074
+18:10:14.662 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7ae9d14e
+18:10:14.665 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7edf31a
+18:10:14.665 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+18:10:15.319 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:10:24.925 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+18:10:24.936 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+18:10:24.936 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+18:10:24.936 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+18:10:24.936 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+18:10:24.936 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+18:10:24.936 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+18:10:24.936 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+18:10:24.937 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+18:10:24.937 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+18:10:24.937 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+18:10:24.937 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+18:10:24.937 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+18:10:24.937 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+18:10:24.937 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+18:10:24.937 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+18:10:24.937 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+18:10:24.937 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+18:10:24.937 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+18:10:24.937 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+18:10:24.937 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+18:10:24.937 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+18:10:24.937 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+18:10:24.938 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+18:10:24.938 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+18:10:24.938 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+18:10:24.938 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+18:10:24.938 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+18:10:24.938 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+18:10:24.938 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+18:10:24.938 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+18:10:24.938 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+18:10:24.938 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+18:10:24.938 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+18:10:25.154 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5b8356e3
+18:10:25.245 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+18:10:25.250 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@71b44655
+18:10:25.253 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6fbd87c9
+18:10:25.256 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@354e31c6
+18:10:25.259 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@2048f757
+18:10:25.262 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5fb2ddf
+18:10:25.265 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6440a31f
+18:10:25.269 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@28553f0e
+18:10:25.272 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@14247795
+18:10:25.276 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6b6325a7
+18:10:25.276 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+18:10:25.786 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:10:29.174 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:10:30.053 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:10:34.855 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:10:38.813 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+18:10:38.825 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+18:10:38.826 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+18:10:38.826 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+18:10:38.826 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+18:10:38.826 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+18:10:38.826 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+18:10:38.826 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+18:10:38.826 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+18:10:38.826 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+18:10:38.826 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+18:10:38.826 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+18:10:38.826 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+18:10:38.826 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+18:10:38.826 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+18:10:38.826 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+18:10:38.827 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+18:10:38.827 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+18:10:38.827 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+18:10:38.827 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+18:10:38.827 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+18:10:38.827 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+18:10:38.827 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+18:10:38.827 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+18:10:38.827 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+18:10:38.827 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+18:10:38.827 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+18:10:38.827 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+18:10:38.827 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+18:10:38.827 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+18:10:38.827 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+18:10:38.827 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+18:10:38.828 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+18:10:38.828 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+18:10:39.050 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5b8356e3
+18:10:39.134 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+18:10:39.140 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@71b44655
+18:10:39.145 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6fbd87c9
+18:10:39.149 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@354e31c6
+18:10:39.153 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@2048f757
+18:10:39.156 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5fb2ddf
+18:10:39.161 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6440a31f
+18:10:39.165 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@28553f0e
+18:10:39.169 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@14247795
+18:10:39.172 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6b6325a7
+18:10:39.172 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+18:10:39.613 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:10:42.037 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:10:44.352 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:10:44.632 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:10:44.635 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:10:45.320 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:10:49.824 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+18:10:49.842 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+18:10:49.842 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+18:10:49.842 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+18:10:49.842 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+18:10:49.842 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+18:10:49.842 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+18:10:49.842 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+18:10:49.842 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+18:10:49.842 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+18:10:49.842 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+18:10:49.842 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+18:10:49.842 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+18:10:49.842 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+18:10:49.842 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+18:10:49.843 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+18:10:49.843 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+18:10:49.843 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+18:10:49.843 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+18:10:49.843 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+18:10:49.843 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+18:10:49.843 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+18:10:49.843 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+18:10:49.843 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+18:10:49.843 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+18:10:49.843 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+18:10:49.843 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+18:10:49.843 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+18:10:49.843 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+18:10:49.843 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+18:10:49.844 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+18:10:49.844 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+18:10:49.844 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+18:10:49.844 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+18:10:50.112 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5dc74f84
+18:10:50.202 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+18:10:50.211 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7df3e01a
+18:10:50.217 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1cecbe0f
+18:10:50.222 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1d4f8818
+18:10:50.227 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7d34fe70
+18:10:50.231 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7a05f093
+18:10:50.237 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1272eb79
+18:10:50.241 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@64888e06
+18:10:50.244 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@705ead2d
+18:10:50.246 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5ba4b3e4
+18:10:50.246 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+18:10:55.246 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:10:55.787 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:10:59.174 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:11:00.054 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:11:02.508 [main] DEBUG c.z.h.HikariConfig - HikariPool-1 - configuration:
+18:11:02.517 [main] DEBUG c.z.h.HikariConfig - allowPoolSuspension.............false
+18:11:02.517 [main] DEBUG c.z.h.HikariConfig - autoCommit......................true
+18:11:02.517 [main] DEBUG c.z.h.HikariConfig - catalog.........................null
+18:11:02.517 [main] DEBUG c.z.h.HikariConfig - connectionInitSql...............null
+18:11:02.518 [main] DEBUG c.z.h.HikariConfig - connectionTestQuery.............null
+18:11:02.518 [main] DEBUG c.z.h.HikariConfig - connectionTimeout...............30000
+18:11:02.518 [main] DEBUG c.z.h.HikariConfig - dataSource......................null
+18:11:02.518 [main] DEBUG c.z.h.HikariConfig - dataSourceClassName.............null
+18:11:02.518 [main] DEBUG c.z.h.HikariConfig - dataSourceJNDI..................null
+18:11:02.518 [main] DEBUG c.z.h.HikariConfig - dataSourceProperties............{characterEncoding=UTF-8, serverTimeZone=UTC+1, cachePrepStmts=true, useSSL=true, prepStmtCacheSize=250, maximumPoolSize=16, useUnicode=true, prepStmtCacheSqlLimit=2048, password=<masked>, zeroDateTimeBehavior=convertToNull}
+18:11:02.518 [main] DEBUG c.z.h.HikariConfig - driverClassName.................null
+18:11:02.518 [main] DEBUG c.z.h.HikariConfig - healthCheckProperties...........{}
+18:11:02.518 [main] DEBUG c.z.h.HikariConfig - healthCheckRegistry.............null
+18:11:02.518 [main] DEBUG c.z.h.HikariConfig - idleTimeout.....................600000
+18:11:02.518 [main] DEBUG c.z.h.HikariConfig - initializationFailFast..........true
+18:11:02.518 [main] DEBUG c.z.h.HikariConfig - isolateInternalQueries..........false
+18:11:02.518 [main] DEBUG c.z.h.HikariConfig - jdbc4ConnectionTest.............false
+18:11:02.518 [main] DEBUG c.z.h.HikariConfig - jdbcUrl........................."jdbc:mysql://localhost:3306/computer-database-db"
+18:11:02.518 [main] DEBUG c.z.h.HikariConfig - leakDetectionThreshold..........0
+18:11:02.518 [main] DEBUG c.z.h.HikariConfig - maxLifetime.....................1800000
+18:11:02.519 [main] DEBUG c.z.h.HikariConfig - maximumPoolSize.................10
+18:11:02.519 [main] DEBUG c.z.h.HikariConfig - metricRegistry..................null
+18:11:02.519 [main] DEBUG c.z.h.HikariConfig - metricsTrackerFactory...........null
+18:11:02.519 [main] DEBUG c.z.h.HikariConfig - minimumIdle.....................10
+18:11:02.519 [main] DEBUG c.z.h.HikariConfig - password........................<masked>
+18:11:02.519 [main] DEBUG c.z.h.HikariConfig - poolName........................"HikariPool-1"
+18:11:02.519 [main] DEBUG c.z.h.HikariConfig - readOnly........................false
+18:11:02.519 [main] DEBUG c.z.h.HikariConfig - registerMbeans..................false
+18:11:02.519 [main] DEBUG c.z.h.HikariConfig - scheduledExecutorService........null
+18:11:02.519 [main] DEBUG c.z.h.HikariConfig - threadFactory...................null
+18:11:02.519 [main] DEBUG c.z.h.HikariConfig - transactionIsolation............null
+18:11:02.519 [main] DEBUG c.z.h.HikariConfig - username........................"admincdb"
+18:11:02.519 [main] DEBUG c.z.h.HikariConfig - validationTimeout...............5000
+18:11:02.732 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@2495dd34
+18:11:02.820 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+18:11:02.827 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@de4b93b
+18:11:02.831 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@795e16ad
+18:11:02.834 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@64cebcd1
+18:11:02.837 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6dfc826
+18:11:02.840 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5a98affe
+18:11:02.845 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@e842a37
+18:11:02.849 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@3a5a6967
+18:11:02.853 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@10218b2c
+18:11:02.855 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@35df0d76
+18:11:02.855 [HikariPool-1 connection adder] DEBUG c.z.h.p.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+18:11:04.856 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:11:09.136 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:11:09.614 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:11:12.038 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:11:14.354 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:11:14.633 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:11:14.636 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:11:15.320 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:11:20.204 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:11:25.787 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:11:29.175 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:11:30.054 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:11:32.821 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:11:34.857 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:11:39.136 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:11:39.614 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:11:42.038 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+18:11:44.363 [HikariPool-1 housekeeper] DEBUG c.z.h.p.HikariPool - HikariPool-1 - Pool stats (total=10, active=1, idle=9, waiting=0)
+18:11:44.480 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@5dc74f84: (connection is broken)
+18:11:44.526 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@5dc74f84: (connection is broken)
+18:11:44.544 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@2495dd34: (connection is broken)
+18:11:44.546 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@5dc74f84: (connection is broken)
+18:11:44.550 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@5dc74f84 failed
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:917)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1235)
+	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1230)
+	at com.mysql.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:5558)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:469)
+	at com.zaxxer.hikari.pool.PoolBase.quietlyCloseConnection(PoolBase.java:113)
+	at com.zaxxer.hikari.pool.HikariPool$1.run(HikariPool.java:427)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 94 milliseconds ago.  The last packet sent successfully to the server was 93 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1962)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at com.excilys.cdb.model.dao.CompanyDAO.index(CompanyDAO.java:213)
+	at com.excilys.cdb.service.CompanyService.index(CompanyService.java:46)
+	at com.excilys.cdb.service.CompanyServiceTest.createUpdateDelete(CompanyServiceTest.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375)
+	... 36 common frames omitted
+18:11:44.548 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@5dc74f84 failed
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:917)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1235)
+	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1230)
+	at com.mysql.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:5558)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:469)
+	at com.zaxxer.hikari.pool.PoolBase.quietlyCloseConnection(PoolBase.java:113)
+	at com.zaxxer.hikari.pool.HikariPool$1.run(HikariPool.java:427)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 71 milliseconds ago.  The last packet sent successfully to the server was 71 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1962)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at com.excilys.cdb.model.dao.CompanyDAO.index(CompanyDAO.java:213)
+	at com.excilys.cdb.service.CompanyService.index(CompanyService.java:46)
+	at com.excilys.cdb.service.CompanyServiceTest.createUpdateDelete(CompanyServiceTest.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375)
+	... 36 common frames omitted
+18:11:44.561 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@5dc74f84 failed
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:917)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1235)
+	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1230)
+	at com.mysql.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:5558)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:469)
+	at com.zaxxer.hikari.pool.PoolBase.quietlyCloseConnection(PoolBase.java:113)
+	at com.zaxxer.hikari.pool.HikariPool$1.run(HikariPool.java:427)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 88 milliseconds ago.  The last packet sent successfully to the server was 87 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1962)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at com.excilys.cdb.model.dao.CompanyDAO.index(CompanyDAO.java:213)
+	at com.excilys.cdb.service.CompanyService.index(CompanyService.java:46)
+	at com.excilys.cdb.service.CompanyServiceTest.createUpdateDelete(CompanyServiceTest.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375)
+	... 36 common frames omitted
+18:11:44.572 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@5b8356e3: (connection is broken)
+18:11:44.572 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@5b8356e3: (connection is broken)
+18:11:44.592 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@2e55aa8d: (connection is broken)
+18:11:44.596 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@2495dd34: (connection is broken)
+18:11:44.598 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@2495dd34 failed
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:917)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1235)
+	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1230)
+	at com.mysql.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:5558)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:469)
+	at com.zaxxer.hikari.pool.PoolBase.quietlyCloseConnection(PoolBase.java:113)
+	at com.zaxxer.hikari.pool.HikariPool$1.run(HikariPool.java:427)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 99 milliseconds ago.  The last packet sent successfully to the server was 98 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1962)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at com.excilys.cdb.model.dao.CompanyDAO.index(CompanyDAO.java:213)
+	at com.excilys.cdb.service.CompanyService.index(CompanyService.java:46)
+	at com.excilys.cdb.service.CompanyServiceTest.createUpdateDelete(CompanyServiceTest.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375)
+	... 36 common frames omitted
+18:11:44.600 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@5b8356e3: (connection is broken)
+18:11:44.601 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@5b8356e3 failed
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:917)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1235)
+	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1230)
+	at com.mysql.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:5558)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:469)
+	at com.zaxxer.hikari.pool.PoolBase.quietlyCloseConnection(PoolBase.java:113)
+	at com.zaxxer.hikari.pool.HikariPool$1.run(HikariPool.java:427)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 187 milliseconds ago.  The last packet sent successfully to the server was 186 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1962)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at com.excilys.cdb.model.dao.CompanyDAO.index(CompanyDAO.java:213)
+	at com.excilys.cdb.service.CompanyService.index(CompanyService.java:46)
+	at com.excilys.cdb.service.CompanyServiceTest.createUpdateDelete(CompanyServiceTest.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375)
+	... 36 common frames omitted
+18:11:44.611 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@2e55aa8d failed
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:917)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1235)
+	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1230)
+	at com.mysql.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:5558)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:469)
+	at com.zaxxer.hikari.pool.PoolBase.quietlyCloseConnection(PoolBase.java:113)
+	at com.zaxxer.hikari.pool.HikariPool$1.run(HikariPool.java:427)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 93 milliseconds ago.  The last packet sent successfully to the server was 93 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1962)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at com.excilys.cdb.model.dao.CompanyDAO.index(CompanyDAO.java:213)
+	at com.excilys.cdb.service.CompanyService.index(CompanyService.java:46)
+	at com.excilys.cdb.service.CompanyServiceTest.createUpdateDelete(CompanyServiceTest.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375)
+	... 36 common frames omitted
+18:11:44.606 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@5dc74f84: (connection is broken)
+18:11:44.625 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@5b8356e3 failed
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:917)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1235)
+	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1230)
+	at com.mysql.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:5558)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:469)
+	at com.zaxxer.hikari.pool.PoolBase.quietlyCloseConnection(PoolBase.java:113)
+	at com.zaxxer.hikari.pool.HikariPool$1.run(HikariPool.java:427)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 51 milliseconds ago.  The last packet sent successfully to the server was 51 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1962)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at com.excilys.cdb.model.dao.CompanyDAO.index(CompanyDAO.java:213)
+	at com.excilys.cdb.service.CompanyService.index(CompanyService.java:46)
+	at com.excilys.cdb.service.CompanyServiceTest.createUpdateDelete(CompanyServiceTest.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375)
+	... 36 common frames omitted
+18:11:44.629 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@5dc74f84: (connection is broken)
+18:11:44.630 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@2495dd34 failed
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:917)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1235)
+	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1230)
+	at com.mysql.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:5558)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:469)
+	at com.zaxxer.hikari.pool.PoolBase.quietlyCloseConnection(PoolBase.java:113)
+	at com.zaxxer.hikari.pool.HikariPool$1.run(HikariPool.java:427)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 99 milliseconds ago.  The last packet sent successfully to the server was 98 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1962)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at com.excilys.cdb.model.dao.CompanyDAO.index(CompanyDAO.java:213)
+	at com.excilys.cdb.service.CompanyService.index(CompanyService.java:46)
+	at com.excilys.cdb.service.CompanyServiceTest.createUpdateDelete(CompanyServiceTest.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375)
+	... 36 common frames omitted
+18:11:44.637 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@5dc74f84 failed
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:917)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1235)
+	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1230)
+	at com.mysql.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:5558)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:469)
+	at com.zaxxer.hikari.pool.PoolBase.quietlyCloseConnection(PoolBase.java:113)
+	at com.zaxxer.hikari.pool.HikariPool$1.run(HikariPool.java:427)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 268 milliseconds ago.  The last packet sent successfully to the server was 268 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1962)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at com.excilys.cdb.model.dao.CompanyDAO.index(CompanyDAO.java:213)
+	at com.excilys.cdb.service.CompanyService.index(CompanyService.java:46)
+	at com.excilys.cdb.service.CompanyServiceTest.createUpdateDelete(CompanyServiceTest.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375)
+	... 36 common frames omitted
+18:11:44.692 [HikariPool-1 connection closer] DEBUG c.z.h.p.PoolBase - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@5b8356e3 failed
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:917)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1235)
+	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1230)
+	at com.mysql.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:5558)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:469)
+	at com.zaxxer.hikari.pool.PoolBase.quietlyCloseConnection(PoolBase.java:113)
+	at com.zaxxer.hikari.pool.HikariPool$1.run(HikariPool.java:427)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 69 milliseconds ago.  The last packet sent successfully to the server was 69 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1962)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at com.excilys.cdb.model.dao.CompanyDAO.index(CompanyDAO.java:213)
+	at com.excilys.cdb.service.CompanyService.index(CompanyService.java:46)
+	at com.excilys.cdb.service.CompanyServiceTest.createUpdateDelete(CompanyServiceTest.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375)
+	... 36 common frames omitted
