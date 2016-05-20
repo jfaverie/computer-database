@@ -3,17 +3,20 @@ package com.excilys.cdb.model.mappers;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.excilys.cdb.model.dto.ComputerDTO;
 import com.excilys.cdb.model.entities.Page;
 import com.excilys.cdb.resources.SortColumn;
 import com.excilys.cdb.resources.SortType;
 import com.excilys.cdb.service.ComputerService;
 
-public enum RequestToPage {
+@Component
+public class RequestToPage {
 
-    INSTANCE;
-
-    private static final ComputerService COMPUTER_SERVICE = ComputerService.INSTANCE;
+    @Autowired
+    private ComputerService computerService;
 
     public Page<ComputerDTO> convert(HttpServletRequest request) {
         final HttpSession session = request.getSession(true);
@@ -59,7 +62,7 @@ public enum RequestToPage {
             sortType = SortType.values()[0];
         }
 
-        computers = COMPUTER_SERVICE.indexSort(page, limit, sc, sortType, name);
+        computers = computerService.indexSort(page, limit, sc, sortType, name);
 
         request.setAttribute("nbComputers", computers.getTotalElements());
         request.setAttribute("currentPage", computers.getPageNumber());

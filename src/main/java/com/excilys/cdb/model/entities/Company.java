@@ -17,13 +17,14 @@ public class Company implements Serializable {
     public Company(CompanyBuilder companyBuilder) {
         super();
     }
-    
+
     public Company() {
         super();
     }
 
     /**
      * Constructor.
+     * 
      * @param id
      *            id of the Company
      * @param name
@@ -34,15 +35,18 @@ public class Company implements Serializable {
         this.id = id;
         this.name = name;
     }
-    
 
     /**
      * Create an entity from a DTO.
-     * @param dto the dto used to create the entity
+     * 
+     * @param dto
+     *            the dto used to create the entity
      */
     public Company(CompanyDTO dto) {
-        setId(dto.getId());
-        name = dto.getName();
+        if (dto != null) {
+            id = dto.getId();
+            name = dto.getName();
+        }
     }
 
     public long getId() {

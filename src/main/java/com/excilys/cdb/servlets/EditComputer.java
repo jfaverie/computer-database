@@ -2,16 +2,17 @@ package com.excilys.cdb.servlets;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import com.excilys.cdb.model.dto.CompanyDTO;
 import com.excilys.cdb.model.dto.ComputerDTO;
@@ -26,17 +27,14 @@ public class EditComputer extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private static final Logger LOGGER = LoggerFactory.getLogger(EditComputer.class);
     
-    private final ComputerService computerService;
-    private final CompanyService companyService;
-    private final DateTimeFormatter formatter;
+    @Autowired
+    private ComputerService computerService;
+    @Autowired
+    private CompanyService companyService;
 
-    /**
-     * Default constructor use for init the computer service.
-     */
-    public EditComputer() {
-        computerService = ComputerService.INSTANCE;
-        companyService = CompanyService.INSTANCE;
-        formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
+        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this, config.getServletContext());
     }
 
     @Override

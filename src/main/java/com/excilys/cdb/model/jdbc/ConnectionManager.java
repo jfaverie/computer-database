@@ -3,15 +3,12 @@ package com.excilys.cdb.model.jdbc;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import org.springframework.stereotype.Component;
+
 import com.excilys.cdb.model.exception.JDBCException;
 
+@Component
 public class ConnectionManager {
-
-    private static final ConnectionManager INSTANCE = new ConnectionManager();
-
-    public static ConnectionManager getInstance() {
-        return INSTANCE;
-    }
 
     private final ThreadLocal<Connection> threadLocal;
 

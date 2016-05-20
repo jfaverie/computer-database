@@ -1,15 +1,15 @@
 package com.excilys.cdb.model.dao;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.excilys.cdb.model.entities.Company;
-import com.excilys.cdb.model.entities.Computer;
 import com.excilys.cdb.model.entities.Page;
 import com.excilys.cdb.model.exception.DAOException;
 import com.excilys.cdb.model.jdbc.ConnectionManager;
@@ -17,9 +17,8 @@ import com.excilys.cdb.model.jdbc.ConnectionMySQL;
 import com.excilys.cdb.resources.SortColumn;
 import com.excilys.cdb.resources.SortType;
 
-public enum CompanyDAO implements DAO<Company> {
-
-    INSTANCE;
+@Repository
+public class CompanyDAO extends DAO<Company> {
 
     private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(CompanyDAO.class);
     private static final String FIND_ID = "SELECT id, name from company WHERE id = ?;";
@@ -31,11 +30,8 @@ public enum CompanyDAO implements DAO<Company> {
     private static final String LISTALL_ORDERED = "SELECT id,name from company LIMIT %d, %d;";
     private static final String COUNT = "SELECT COUNT(*) FROM company";
 
-    private final ConnectionManager manager;
-
-    private CompanyDAO() {
-        manager = ConnectionManager.getInstance();
-    }
+    @Autowired
+    private ConnectionManager manager;
 
     @Override
     public Company findById(long id) {
@@ -53,10 +49,12 @@ public enum CompanyDAO implements DAO<Company> {
         } catch (SQLException e) {
             throw new DAOException("Fail to get a company by id", e);
         } finally {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                throw new DAOException("Fail to close a connection", e);
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    throw new DAOException("Fail to close a connection", e);
+                }
             }
         }
         return company;
@@ -96,8 +94,7 @@ public enum CompanyDAO implements DAO<Company> {
             connection = ConnectionMySQL.INSTANCE.getConnection();
             PreparedStatement stmt = connection.prepareStatement(CREATE, PreparedStatement.RETURN_GENERATED_KEYS);
             stmt.setString(1, comp.getName());
-            stmt.executeUpdate();
-            if (stmt.executeUpdate() > 1) {
+            if (stmt.executeUpdate() == 1) {
                 CompanyDAO.LOGGER.info("Insert company");
             } else {
                 CompanyDAO.LOGGER.warn("Fail to create a company");
@@ -134,8 +131,7 @@ public enum CompanyDAO implements DAO<Company> {
             PreparedStatement stmt = connection.prepareStatement(UPDATE);
             stmt.setString(1, comp.getName());
             stmt.setLong(2, comp.getId());
-            stmt.executeUpdate();
-            if (stmt.executeUpdate() > 1) {
+            if (stmt.executeUpdate() == 1) {
                 CompanyDAO.LOGGER.info("Update a company");
             } else {
                 CompanyDAO.LOGGER.warn("Fail to update a company");
@@ -161,8 +157,7 @@ public enum CompanyDAO implements DAO<Company> {
             connection = ConnectionMySQL.INSTANCE.getConnection();
             PreparedStatement stmt = connection.prepareStatement(DELETE);
             stmt.setLong(1, id);
-            stmt.executeUpdate();
-            if (stmt.executeUpdate() > 1) {
+            if (stmt.executeUpdate() == 1) {
                 CompanyDAO.LOGGER.info("Delete a company");
             } else {
                 CompanyDAO.LOGGER.warn("Fail to delete a company");
@@ -180,24 +175,20 @@ public enum CompanyDAO implements DAO<Company> {
 
     }
 
-    
     public void deleteWithLocalThread(long companyId) {
         Connection connection = manager.getConnection();
 
         try {
             PreparedStatement stmt = connection.prepareStatement(DELETE);
             stmt.setLong(1, companyId);
-            stmt.executeUpdate();
+            if (stmt.executeUpdate() == 1) {
+                CompanyDAO.LOGGER.info("Delete a company");
+            } else {
+                CompanyDAO.LOGGER.warn("Fail to delete a company");
+            }
         } catch (SQLException e) {
             throw new DAOException("Fail to delete a company", e);
-        } finally {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                throw new DAOException("Fail to close the connection", e);
-            }
         }
-
     }
 
     @Override
@@ -222,7 +213,6 @@ public enum CompanyDAO implements DAO<Company> {
             rs.close();
             rs = connection.prepareStatement(COUNT).executeQuery();
             rs.next();
-
             page.setTotalElements(rs.getInt(1));
 
         } catch (SQLException e) {
@@ -290,7 +280,7 @@ public enum CompanyDAO implements DAO<Company> {
     @Override
     public void deleteByCompany(long companyId) {
         // TODO Auto-generated method stub
-        
+
     }
 
 }

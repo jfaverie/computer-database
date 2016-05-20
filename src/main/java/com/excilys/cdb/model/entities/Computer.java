@@ -21,7 +21,7 @@ public class Computer implements Serializable {
     public Computer(ComputerBuilder computerBuilder) {
         super();
     }
-    
+
     public Computer() {
         super();
     }
@@ -48,18 +48,21 @@ public class Computer implements Serializable {
         this.discontinued = discontinued;
         this.company = company;
     }
-    
 
     /**
      * Create an entity from a dto.
-     * @param dto the dto used to create the entity
+     * 
+     * @param dto
+     *            the dto used to create the entity
      */
     public Computer(ComputerDTO dto) {
-        this.setId(dto.getId());
-        this.name = dto.getName();
-        this.introduced = dto.getIntroduced();
-        this.discontinued = dto.getDiscontinued();
-        this.company = new Company(dto.getCompany());
+        if (dto != null) {
+            this.id = dto.getId();
+            this.name = dto.getName();
+            this.introduced = dto.getIntroduced();
+            this.discontinued = dto.getDiscontinued();
+            this.company = new Company(dto.getCompany());
+        }
     }
 
     public long getId() {

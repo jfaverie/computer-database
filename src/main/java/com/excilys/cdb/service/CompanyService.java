@@ -1,28 +1,27 @@
 package com.excilys.cdb.service;
 
 import java.sql.Connection;
-import java.sql.SQLException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.excilys.cdb.model.dao.CompanyDAO;
 import com.excilys.cdb.model.dao.ComputerDAO;
 import com.excilys.cdb.model.dto.CompanyDTO;
 import com.excilys.cdb.model.entities.Company;
 import com.excilys.cdb.model.entities.Page;
-import com.excilys.cdb.model.exception.DAOException;
 import com.excilys.cdb.model.jdbc.ConnectionManager;
-import com.excilys.cdb.model.jdbc.ConnectionMySQL;
 import com.excilys.cdb.model.mappers.CompanyMapper;
 
-public enum CompanyService {
+@Service
+public class CompanyService {
 
-    INSTANCE;
-    private static final CompanyDAO COMPANYDAO = CompanyDAO.INSTANCE;
-    private static final ComputerDAO COMPUTERDAO = ComputerDAO.INSTANCE;
-    private final ConnectionManager manager;
-
-    private CompanyService() {
-        manager = ConnectionManager.getInstance();
-    }
+    @Autowired
+    private CompanyDAO companyDAO;
+    @Autowired
+    private ComputerDAO computerDAO;
+    @Autowired
+    private ConnectionManager manager;
 
     /**
      * Return a company from an id.
@@ -31,7 +30,7 @@ public enum CompanyService {
      * @return the company you want
      */
     public CompanyDTO getById(Long id) {
-        return CompanyMapper.convertCompany(COMPANYDAO.findById(id));
+        return CompanyMapper.convertCompany(companyDAO.findById(id));
     }
 
     /**
@@ -43,7 +42,7 @@ public enum CompanyService {
      * @return a page of companies
      */
     public Page<CompanyDTO> index(int pageNb, int elemPerPg) {
-        return CompanyMapper.convertListCompanies(COMPANYDAO.index(pageNb, elemPerPg));
+        return CompanyMapper.convertListCompanies(companyDAO.index(pageNb, elemPerPg));
     }
 
     /**
@@ -52,8 +51,7 @@ public enum CompanyService {
      *            the company to add in the database
      */
     public long create(CompanyDTO entity) {
-        long id = 0;
-        id = COMPANYDAO.create(new Company(entity));
+        long id = companyDAO.create(new Company(entity));
         return id;
     }
 
@@ -63,7 +61,7 @@ public enum CompanyService {
      *            the company to update
      */
     public void update(CompanyDTO entity) {
-        COMPANYDAO.update(new Company(entity));
+        companyDAO.update(new Company(entity));
     }
 
     /**
@@ -74,10 +72,9 @@ public enum CompanyService {
     public void delete(Long id) {
         Connection connection = manager.getConnection();
         try {
-            manager.initTransaction(connection);
-            COMPUTERDAO.deleteByCompany(id);
-            COMPANYDAO.deleteWithLocalThread(id);
-        } catch (DAOException e) {
+            computerDAO.deleteByCompany(id);
+            companyDAO.deleteWithLocalThread(id);
+        } catch (Exception e) {
             manager.rollback(connection);
         } finally {
             manager.close(connection);

@@ -2,20 +2,20 @@ package com.excilys.cdb.servlets;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import com.excilys.cdb.model.dto.CompanyDTO;
 import com.excilys.cdb.model.dto.ComputerDTO;
-import com.excilys.cdb.model.entities.Computer;
 import com.excilys.cdb.model.entities.Page;
 import com.excilys.cdb.model.exception.DAOException;
 import com.excilys.cdb.service.CompanyService;
@@ -27,16 +27,14 @@ public class AddComputer extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private static final Logger LOGGER = LoggerFactory.getLogger(AddComputer.class);
 
+    @Autowired
     private static ComputerService computerService;
+    @Autowired
     private static CompanyService companyService;
-    private Page<Computer> page;
-    private final DateTimeFormatter formatter;
-
-    public AddComputer() {
-        super();
-        computerService = ComputerService.INSTANCE;
-        companyService = CompanyService.INSTANCE;
-        formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
+        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this, config.getServletContext());
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

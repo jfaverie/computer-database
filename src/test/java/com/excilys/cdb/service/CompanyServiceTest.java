@@ -38,19 +38,19 @@ public class CompanyServiceTest {
         CompanyDTO origin = new CompanyDTO();
         origin.setName("A cool Company");
 
-        //we test if create actually adds an element
+        // we test if create actually adds an element
         countBefore = service.index(1, 1).getTotalElements();
         long id = service.create(origin);
         countAfter = service.index(1, 1).getTotalElements();
 
         assertEquals(countBefore + 1, countAfter);
 
-        //we test if getById returns the good element
+        // we test if getById returns the good element
         CompanyDTO db = service.getById(id);
 
         assertEquals(db.getName(), origin.getName());
 
-        //we test if update does not add or delete an element
+        // we test if update does not add or delete an element
         db.setName("Great Company");
 
         countBefore = service.index(1, 1).getTotalElements();
@@ -59,12 +59,12 @@ public class CompanyServiceTest {
 
         assertEquals(countBefore, countAfter);
 
-        //we test if update actually updated the element
+        // we test if update actually updated the element
         origin = service.getById(db.getId());
 
         assertEquals(db.getName(), origin.getName());
 
-        //we test if delete actually deletes an element
+        // we test if delete actually deletes an element
         countBefore = service.index(1, 1).getTotalElements();
         service.delete(origin.getId());
         countAfter = service.index(1, 1).getTotalElements();

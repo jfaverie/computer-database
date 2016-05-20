@@ -1,0 +1,15 @@
+17:51:38.901 [main] ERROR c.e.c.m.d.CompanyDAO - Communications link failure
+
+The last packet successfully received from the server was 2 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+17:51:38.901 [main] ERROR c.e.c.m.d.CompanyDAO - Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 3 milliseconds ago.
+17:51:38.902 [main] ERROR c.e.c.m.d.CompanyDAO - Communications link failure
+
+The last packet successfully received from the server was 6 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+17:51:38.902 [main] ERROR c.e.c.m.d.CompanyDAO - Communications link failure
+
+The last packet successfully received from the server was 6 milliseconds ago.  The last packet sent successfully to the server was 5 milliseconds ago.
+17:51:39.011 [main] ERROR c.e.c.m.d.CompanyDAO - Communications link failure
+
+The last packet successfully received from the server was 2 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.

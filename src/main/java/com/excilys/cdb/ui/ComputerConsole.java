@@ -2,6 +2,7 @@ package com.excilys.cdb.ui;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDate;
 
@@ -14,22 +15,14 @@ public class ComputerConsole {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ComputerConsole.class);
 
-    private final KeyboardScanner scanner;
-    private final ComputerDAO dao;
+    private KeyboardScanner scanner;
+    private ComputerDAO dao;
+    private CompanyDAO companyDAO;
 
     private static ComputerConsole instance = new ComputerConsole();
 
     public static ComputerConsole getInstance() {
         return instance;
-    }
-
-    /**
-     * Default constructor to init the scanner and the dao of computer.
-     */
-    private ComputerConsole() {
-        scanner = KeyboardScanner.getInstance();
-        dao = ComputerDAO.INSTANCE;
-
     }
 
     /**
@@ -110,7 +103,7 @@ public class ComputerConsole {
         computer.setDiscontinued(date);
 
         System.out.println("Entrer l'identifiant du constructeur");
-        computer.setCompany(CompanyDAO.INSTANCE.findById(scanner.nextLong()));
+        computer.setCompany(companyDAO.findById(scanner.nextLong()));
 
         try {
             dao.create(computer);
@@ -152,7 +145,7 @@ public class ComputerConsole {
         System.out.println("Entrer l'identifiant du constructeur");
         System.out.println("Ancien identifiant de l'entreprise " + computer.getCompany().getName() + " : "
                 + computer.getCompany().getId());
-        computer.setCompany(CompanyDAO.INSTANCE.findById(scanner.nextLong()));
+        computer.setCompany(companyDAO.findById(scanner.nextLong()));
 
         try {
             dao.update(computer);

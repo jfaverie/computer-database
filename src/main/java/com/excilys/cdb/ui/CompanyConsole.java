@@ -3,6 +3,8 @@ package com.excilys.cdb.ui;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.excilys.cdb.model.dao.CompanyDAO;
 import com.excilys.cdb.model.entities.Company;
@@ -12,25 +14,14 @@ public class CompanyConsole {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CompanyConsole.class);
 
-    private final KeyboardScanner scanner;
-    private static CompanyConsole ourInstance = new CompanyConsole();
+    private KeyboardScanner scanner;
+    private static CompanyConsole ourInstance;
 
-    private final CompanyDAO dao;
+    private CompanyDAO dao;
 
     public static CompanyConsole getInstance() {
         return ourInstance;
     }
-
-
-    /**
-     * Default constructor to init the scanner and the dao of company.
-     */
-    private CompanyConsole() {
-        scanner = KeyboardScanner.getInstance();
-        dao = CompanyDAO.INSTANCE;
-
-    }
-
 
     /**
      * Display CLI commands to index the companies.

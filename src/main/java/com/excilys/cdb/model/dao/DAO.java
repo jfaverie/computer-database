@@ -2,12 +2,15 @@ package com.excilys.cdb.model.dao;
 
 import java.sql.Connection;
 
+import org.springframework.stereotype.Repository;
+
 import com.excilys.cdb.model.entities.Computer;
 import com.excilys.cdb.model.entities.Page;
 import com.excilys.cdb.resources.SortColumn;
 import com.excilys.cdb.resources.SortType;
 
-public interface DAO<T> {
+@Repository
+public abstract class DAO<T> {
 
     /**
      * Permet de récupérer un objet via son ID.

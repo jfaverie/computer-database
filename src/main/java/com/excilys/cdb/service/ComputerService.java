@@ -1,5 +1,8 @@
 package com.excilys.cdb.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.excilys.cdb.model.dao.ComputerDAO;
 import com.excilys.cdb.model.dto.ComputerDTO;
 import com.excilys.cdb.model.entities.Computer;
@@ -8,10 +11,11 @@ import com.excilys.cdb.model.mappers.ComputerMapper;
 import com.excilys.cdb.resources.SortColumn;
 import com.excilys.cdb.resources.SortType;
 
-public enum ComputerService {
+@Service
+public class ComputerService {
 
-    INSTANCE;
-    private static final ComputerDAO COMPUTERDAO = ComputerDAO.INSTANCE;
+    @Autowired
+    private ComputerDAO computerDAO;
 
     /**
      * Return a computerDTO from a computer id.
@@ -20,7 +24,7 @@ public enum ComputerService {
      * @return the computerDTO you want
      */
     public ComputerDTO getById(Long id) {
-        return ComputerMapper.convertComputer(COMPUTERDAO.findById(id));
+        return ComputerMapper.convertComputer(computerDAO.findById(id));
     }
 
     /**
@@ -32,11 +36,11 @@ public enum ComputerService {
      * @return a page of computers
      */
     public Page<ComputerDTO> index(int pageNb, int elemPerPg) {
-        return ComputerMapper.convertPageToDTO(COMPUTERDAO.index(pageNb, elemPerPg));
+        return ComputerMapper.convertPageToDTO(computerDAO.index(pageNb, elemPerPg));
     }
 
     public Page<ComputerDTO> indexSort(int pageNb, int elemPerPg, SortColumn sc, SortType sortType, String name) {
-        return ComputerMapper.convertPageToDTO(COMPUTERDAO.indexSort(pageNb, elemPerPg, sc, sortType, name));
+        return ComputerMapper.convertPageToDTO(computerDAO.indexSort(pageNb, elemPerPg, sc, sortType, name));
     }
 
     /**
@@ -45,8 +49,7 @@ public enum ComputerService {
      *            the computer to add in the database
      */
     public long create(ComputerDTO entity) {
-        long id = 0;
-        id = COMPUTERDAO.create(new Computer(entity));
+        long id = computerDAO.create(new Computer(entity));
         return id;
     }
 
@@ -56,7 +59,7 @@ public enum ComputerService {
      *            the computer to update
      */
     public void update(ComputerDTO entity) {
-        COMPUTERDAO.update(new Computer(entity));
+        computerDAO.update(new Computer(entity));
     }
 
     /**
@@ -65,7 +68,7 @@ public enum ComputerService {
      *            the id of the computer to delete
      */
     public void delete(Long id) {
-        COMPUTERDAO.delete(id);
+        computerDAO.delete(id);
     }
 
 }
