@@ -1,30 +1,29 @@
 package com.excilys.cdb.service;
 
-import java.sql.Connection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.excilys.cdb.model.dao.CompanyDAO;
 import com.excilys.cdb.model.dao.ComputerDAO;
 import com.excilys.cdb.model.dto.CompanyDTO;
 import com.excilys.cdb.model.entities.Company;
 import com.excilys.cdb.model.entities.Page;
-import com.excilys.cdb.model.jdbc.ConnectionManager;
 import com.excilys.cdb.model.mappers.CompanyMapper;
 
 @Service
+@Transactional
 public class CompanyService {
 
     @Autowired
     private CompanyDAO companyDAO;
     @Autowired
     private ComputerDAO computerDAO;
-    @Autowired
-    private ConnectionManager manager;
 
     /**
      * Return a company from an id.
+     * 
      * @param id
      *            of the company
      * @return the company you want
@@ -35,6 +34,7 @@ public class CompanyService {
 
     /**
      * Return all the company of the database, per page.
+     * 
      * @param pageNb
      *            the page you want
      * @param elemPerPg
@@ -47,6 +47,7 @@ public class CompanyService {
 
     /**
      * Add a new company in the database.
+     * 
      * @param entity
      *            the company to add in the database
      */
@@ -57,6 +58,7 @@ public class CompanyService {
 
     /**
      * Update a company in the database.
+     * 
      * @param entity
      *            the company to update
      */
@@ -66,19 +68,13 @@ public class CompanyService {
 
     /**
      * Delete a company in the database.
+     * 
      * @param id
      *            the id of the company to delete
      */
     public void delete(Long id) {
-        Connection connection = manager.getConnection();
-        try {
-            computerDAO.deleteByCompany(id);
-            companyDAO.deleteWithLocalThread(id);
-        } catch (Exception e) {
-            manager.rollback(connection);
-        } finally {
-            manager.close(connection);
-        }
+        computerDAO.deleteByCompany(id);
+        companyDAO.deleteWithLocalThread(id);
     }
 
 }

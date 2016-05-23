@@ -29,6 +29,7 @@
 		<logback.version>1.1.7</logback.version>
 		<slf4j.version>1.7.21</slf4j.version>
 		<spring.version>4.2.6.RELEASE</spring.version>
+		<jcl.slf4j.version>1.7.12</jcl.slf4j.version>
 	</properties>
 
 	<build>
@@ -113,6 +114,17 @@
 			<version>${spring.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 		<!-- Tests -->
 
 		<dependency>
@@ -172,6 +184,11 @@
 			<version>${slf4j.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${jcl.slf4j.version}</version>
+		</dependency>
 	</dependencies>
 
 </project>

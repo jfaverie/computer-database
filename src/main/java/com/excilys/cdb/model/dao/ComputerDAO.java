@@ -15,7 +15,6 @@ import com.excilys.cdb.model.entities.Computer;
 import com.excilys.cdb.model.entities.Page;
 import com.excilys.cdb.model.exception.DAOException;
 import com.excilys.cdb.model.jdbc.ConnectionManager;
-import com.excilys.cdb.model.jdbc.ConnectionMySQL;
 import com.excilys.cdb.resources.SortColumn;
 import com.excilys.cdb.resources.SortType;
 
@@ -43,7 +42,7 @@ public class ComputerDAO extends DAO<Computer> {
         ResultSet rs = null;
         Connection connection = null;
         try {
-            connection = ConnectionMySQL.INSTANCE.getConnection();
+            connection = manager.getConnection();
             PreparedStatement stmt = connection.prepareStatement(FIND_ID);
             stmt.setLong(1, id);
             rs = stmt.executeQuery();
@@ -69,13 +68,6 @@ public class ComputerDAO extends DAO<Computer> {
             stmt.close();
         } catch (SQLException e) {
             throw new DAOException("Fail to find a computer by id", e);
-        } finally {
-            try {
-                rs.close();
-                connection.close();
-            } catch (SQLException e) {
-                throw new DAOException("Fail to close the connection", e);
-            }
         }
         return computer;
     }
@@ -86,7 +78,7 @@ public class ComputerDAO extends DAO<Computer> {
         ResultSet rs = null;
         Connection connection = null;
         try {
-            connection = ConnectionMySQL.INSTANCE.getConnection();
+            connection = manager.getConnection();
             PreparedStatement stmt = connection.prepareStatement(FIND_NAME);
             stmt.setString(1, name);
             rs = stmt.executeQuery();
@@ -112,14 +104,7 @@ public class ComputerDAO extends DAO<Computer> {
 
         } catch (SQLException e) {
             throw new DAOException("Fail to find a computer by name", e);
-        } finally {
-            try {
-                rs.close();
-                connection.close();
-            } catch (SQLException e) {
-                throw new DAOException("Fail to close the connection", e);
-            }
-        }
+        } 
         return computer;
     }
 
@@ -128,7 +113,7 @@ public class ComputerDAO extends DAO<Computer> {
         long id = 0;
         Connection connection = null;
         try {
-            connection = ConnectionMySQL.INSTANCE.getConnection();
+            connection = manager.getConnection();
             PreparedStatement stmt = connection.prepareStatement(CREATE, PreparedStatement.RETURN_GENERATED_KEYS);
             stmt.setString(1, comp.getName());
             ArrayList<Integer> ids = new ArrayList<>();
@@ -155,7 +140,7 @@ public class ComputerDAO extends DAO<Computer> {
             } else {
                 stmt.setNull(4, java.sql.Types.BIGINT);
             }
-            
+
             stmt.executeUpdate();
             rs.close();
             rs = stmt.getGeneratedKeys();
@@ -167,13 +152,7 @@ public class ComputerDAO extends DAO<Computer> {
 
         } catch (SQLException e) {
             throw new DAOException("Fail to create a new computer", e);
-        } finally {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                throw new DAOException("Fail to close the connection", e);
-            }
-        }
+        } 
         return id;
     }
 
@@ -181,7 +160,7 @@ public class ComputerDAO extends DAO<Computer> {
     public void update(Computer comp) {
         Connection connection = null;
         try {
-            connection = ConnectionMySQL.INSTANCE.getConnection();
+            connection = manager.getConnection();
             PreparedStatement stmt = connection.prepareStatement(UPDATE);
             stmt.setString(1, comp.getName());
             ArrayList<Integer> ids = new ArrayList<>();
@@ -214,34 +193,20 @@ public class ComputerDAO extends DAO<Computer> {
 
         } catch (SQLException e) {
             throw new DAOException("Fail to update a computer", e);
-        } finally {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                throw new DAOException("Fail to close the connection", e);
-            }
         }
-
     }
 
     @Override
     public void delete(long id) {
         Connection connection = null;
         try {
-            connection = ConnectionMySQL.INSTANCE.getConnection();
+            connection = manager.getConnection();
             PreparedStatement stmt = connection.prepareStatement(DELETE);
             stmt.setLong(1, id);
             stmt.executeUpdate();
         } catch (SQLException e) {
             throw new DAOException("Fail to delete a computer", e);
-        } finally {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                throw new DAOException("Fail to close the connection", e);
-            }
-        }
-
+        } 
     }
 
     @Override
@@ -264,7 +229,7 @@ public class ComputerDAO extends DAO<Computer> {
         page.setElementPerPage(elemPerPg);
         ResultSet rs = null;
         try {
-            connection = ConnectionMySQL.INSTANCE.getConnection();
+            connection = manager.getConnection();
             rs = connection.prepareStatement(String.format(LISTALL, pageNb * elemPerPg, elemPerPg)).executeQuery();
             while (rs.next()) {
                 Computer computer = new Computer();
@@ -295,13 +260,6 @@ public class ComputerDAO extends DAO<Computer> {
 
         } catch (SQLException e) {
             throw new DAOException("Fail to get all computers", e);
-        } finally {
-            try {
-                connection.close();
-                rs.close();
-            } catch (SQLException e) {
-                throw new DAOException("Fail to close the connection", e);
-            }
         }
         return page;
     }
@@ -318,7 +276,7 @@ public class ComputerDAO extends DAO<Computer> {
         ResultSet rs = null;
         try {
             PreparedStatement stmt = null;
-            connection = ConnectionMySQL.INSTANCE.getConnection();
+            connection = manager.getConnection();
             // if (!name.isEmpty()) {
             stmt = connection.prepareStatement(
                     String.format(LISTALL_ORDERED, sc + ((sortType == SortType.ASC) ? " ASC " : " DESC ")));
@@ -369,15 +327,6 @@ public class ComputerDAO extends DAO<Computer> {
 
         } catch (SQLException e) {
             throw new DAOException("Fail to get all computers", e);
-        } finally {
-            try {
-                connection.close();
-                if (rs != null) {
-                    rs.close();
-                }
-            } catch (SQLException e) {
-                throw new DAOException("Fail to close the connection", e);
-            }
         }
         return page;
     }

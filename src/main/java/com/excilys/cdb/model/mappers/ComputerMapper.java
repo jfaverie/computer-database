@@ -4,9 +4,7 @@ import com.excilys.cdb.model.dto.ComputerDTO;
 import com.excilys.cdb.model.entities.Computer;
 import com.excilys.cdb.model.entities.Page;
 
-public enum ComputerMapper {
-
-    INSTANCE;
+public class ComputerMapper {
 
     /**
      * Use to convert a computer object into a computerDTO.

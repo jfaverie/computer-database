@@ -4,22 +4,21 @@ import static org.junit.Assert.*;
 
 import java.time.LocalDate;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.excilys.cdb.model.dto.ComputerDTO;
-import com.excilys.cdb.model.entities.Computer;
 import com.excilys.cdb.model.entities.Page;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration("file:src/main/webapp/WEB-INF/applicationContext.xml")
 public class ComputerServiceTest {
 
+    @Autowired
     private ComputerService service;
-
-    @Before
-    public void setUp() throws Exception {
-        service = ComputerService.INSTANCE;
-    }
 
     @Test
     public void getById() {

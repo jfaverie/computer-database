@@ -1,27 +1,20 @@
-package com.excilys.cdb.model.jdbc;
+/*package com.excilys.cdb.model.jdbc;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
+
+import org.springframework.stereotype.Component;
 
 import com.excilys.cdb.model.exception.DAOException;
 import com.excilys.cdb.model.exception.JDBCException;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
-public enum ConnectionMySQL {
+@Component
+public class ConnectionMySQL {
 
-    INSTANCE;
-
-
-
-    private final HikariDataSource dataSource;
-    /**
-     * Private constructor of ConnectionMySQL for the singleton pattern.
-     */
     private ConnectionMySQL() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -54,13 +47,7 @@ public enum ConnectionMySQL {
         }
     }
 
-    /**
-     * Return a JDBC connection to a MySQL database.
-     * 
-     * @return a connection to a database
-     * @throws SQLException
-     *             if a connection with a database can't be done
-     */
+
     public Connection getConnection() {
         try {
             return dataSource.getConnection();
@@ -70,3 +57,5 @@ public enum ConnectionMySQL {
     }
 
 }
+
+*/

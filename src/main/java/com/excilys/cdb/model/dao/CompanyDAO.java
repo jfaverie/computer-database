@@ -13,7 +13,6 @@ import com.excilys.cdb.model.entities.Company;
 import com.excilys.cdb.model.entities.Page;
 import com.excilys.cdb.model.exception.DAOException;
 import com.excilys.cdb.model.jdbc.ConnectionManager;
-import com.excilys.cdb.model.jdbc.ConnectionMySQL;
 import com.excilys.cdb.resources.SortColumn;
 import com.excilys.cdb.resources.SortType;
 
@@ -39,7 +38,7 @@ public class CompanyDAO extends DAO<Company> {
         ResultSet rs = null;
         Connection connection = null;
         try {
-            connection = ConnectionMySQL.INSTANCE.getConnection();
+            connection = manager.getConnection();
             PreparedStatement stmt = connection.prepareStatement(FIND_ID);
             stmt.setLong(1, id);
             rs = stmt.executeQuery();
@@ -48,14 +47,6 @@ public class CompanyDAO extends DAO<Company> {
             company.setName(rs.getString("name"));
         } catch (SQLException e) {
             throw new DAOException("Fail to get a company by id", e);
-        } finally {
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    throw new DAOException("Fail to close a connection", e);
-                }
-            }
         }
         return company;
     }
@@ -66,7 +57,7 @@ public class CompanyDAO extends DAO<Company> {
         ResultSet rs = null;
         Connection connection = null;
         try {
-            connection = ConnectionMySQL.INSTANCE.getConnection();
+            connection = manager.getConnection();
             PreparedStatement stmt = connection.prepareStatement(FIND_NAME);
             stmt.setString(1, name);
             rs = stmt.executeQuery();
@@ -75,12 +66,6 @@ public class CompanyDAO extends DAO<Company> {
             company.setName(rs.getString("name"));
         } catch (SQLException e) {
             throw new DAOException("Fail to get a company by name", e);
-        } finally {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                throw new DAOException("Fail to get a company by name", e);
-            }
         }
         return company;
     }
@@ -89,9 +74,8 @@ public class CompanyDAO extends DAO<Company> {
     public long create(Company comp) {
         Connection connection = null;
         long id = 0;
-
         try {
-            connection = ConnectionMySQL.INSTANCE.getConnection();
+            connection = manager.getConnection();
             PreparedStatement stmt = connection.prepareStatement(CREATE, PreparedStatement.RETURN_GENERATED_KEYS);
             stmt.setString(1, comp.getName());
             if (stmt.executeUpdate() == 1) {
@@ -109,25 +93,15 @@ public class CompanyDAO extends DAO<Company> {
         } catch (SQLException e) {
             CompanyDAO.LOGGER.error(e.getMessage());
             throw new DAOException("Fail to create a company", e);
-        } finally {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                throw new DAOException("Fail to close the connection", e);
-            }
-
         }
-
         return id;
     }
 
     @Override
     public void update(Company comp) {
-
         Connection connection = null;
-
         try {
-            connection = ConnectionMySQL.INSTANCE.getConnection();
+            connection = manager.getConnection();
             PreparedStatement stmt = connection.prepareStatement(UPDATE);
             stmt.setString(1, comp.getName());
             stmt.setLong(2, comp.getId());
@@ -140,13 +114,6 @@ public class CompanyDAO extends DAO<Company> {
         } catch (SQLException e) {
             CompanyDAO.LOGGER.error(e.getMessage());
             throw new DAOException("Fail to update a company", e);
-        } finally {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                throw new DAOException("Fail to update a company", e);
-            }
-
         }
     }
 
@@ -154,7 +121,7 @@ public class CompanyDAO extends DAO<Company> {
     public void delete(long id) {
         Connection connection = null;
         try {
-            connection = ConnectionMySQL.INSTANCE.getConnection();
+            connection = manager.getConnection();
             PreparedStatement stmt = connection.prepareStatement(DELETE);
             stmt.setLong(1, id);
             if (stmt.executeUpdate() == 1) {
@@ -165,19 +132,11 @@ public class CompanyDAO extends DAO<Company> {
         } catch (SQLException e) {
             CompanyDAO.LOGGER.error(e.getMessage());
             throw new DAOException("Fail to delete a company", e);
-        } finally {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                throw new DAOException("Fail to close the connection", e);
-            }
         }
-
     }
 
     public void deleteWithLocalThread(long companyId) {
         Connection connection = manager.getConnection();
-
         try {
             PreparedStatement stmt = connection.prepareStatement(DELETE);
             stmt.setLong(1, companyId);
@@ -198,9 +157,8 @@ public class CompanyDAO extends DAO<Company> {
         Connection connection = null;
         page.setPageNumber(pageNb);
         page.setElementPerPage(elemPerPg);
-
         try {
-            connection = ConnectionMySQL.INSTANCE.getConnection();
+            connection = manager.getConnection();
             rs = connection.prepareStatement(String.format(LISTALL, pageNb * elemPerPg, elemPerPg)).executeQuery();
             page = new Page<>();
             page.setPageNumber(pageNb);
@@ -217,15 +175,7 @@ public class CompanyDAO extends DAO<Company> {
 
         } catch (SQLException e) {
             throw new DAOException("Fail to get all companies", e);
-        } finally {
-            try {
-                rs.close();
-                connection.close();
-            } catch (SQLException e) {
-                throw new DAOException("Fail to get all companies", e);
-            }
-
-        }
+        } 
         return page;
     }
 
@@ -237,7 +187,7 @@ public class CompanyDAO extends DAO<Company> {
         page.setElementPerPage(elemPerPg);
         ResultSet rs = null;
         try {
-            connection = ConnectionMySQL.INSTANCE.getConnection();
+            connection = manager.getConnection();
             PreparedStatement stmt = connection.prepareStatement(
                     String.format(LISTALL_ORDERED,
                             (sc.ordinal() + 1) + ((sortType == SortType.ASC) ? " ASC " : " DESC ")),
@@ -258,21 +208,10 @@ public class CompanyDAO extends DAO<Company> {
             rs.close();
             rs = connection.prepareStatement(COUNT).executeQuery();
             rs.next();
-
             page.setTotalElements(rs.getInt(1));
 
-        } catch (
-
-        SQLException e) {
+        } catch (SQLException e) {
             throw new DAOException("Fail to get all companies", e);
-        } finally {
-            try {
-                rs.close();
-                connection.close();
-            } catch (SQLException e) {
-                throw new DAOException("Fail to get all companies", e);
-            }
-
         }
         return page;
     }

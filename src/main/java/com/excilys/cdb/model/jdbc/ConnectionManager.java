@@ -3,35 +3,37 @@ package com.excilys.cdb.model.jdbc;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.excilys.cdb.model.exception.JDBCException;
+import com.excilys.cdb.model.exception.ConnectionException;
+import com.zaxxer.hikari.HikariDataSource;
 
 @Component
 public class ConnectionManager {
 
-    private final ThreadLocal<Connection> threadLocal;
-
-    private ConnectionManager() {
-        threadLocal = new ThreadLocal<>();
-    }
+    @Autowired
+    private HikariDataSource ds;
+    private Logger logger = LoggerFactory.getLogger(ConnectionManager.class);
 
     public Connection getConnection() {
-        if (threadLocal.get() == null) {
-            threadLocal.set(ConnectionMySQL.INSTANCE.getConnection());
+        try {
+            return ds.getConnection();
+        } catch (SQLException e) {
+            logger.error("[Catch] <" + e.getClass().getSimpleName() + "> " + e.getMessage());
+            throw new ConnectionException(e);
         }
-        return threadLocal.get();
     }
 
-
-    public void initTransaction(Connection connection) {
+/*    public void initTransaction(Connection connection) {
         try {
             connection.setAutoCommit(false);
         } catch (SQLException e) {
             throw new JDBCException(e);
         }
     }
-
 
     public void commit(Connection connection) {
         try {
@@ -57,4 +59,5 @@ public class ConnectionManager {
         }
         threadLocal.remove();
     }
+    */
 }

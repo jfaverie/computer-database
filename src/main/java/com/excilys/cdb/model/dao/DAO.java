@@ -1,20 +1,13 @@
 package com.excilys.cdb.model.dao;
 
-import java.sql.Connection;
-
-import org.springframework.stereotype.Repository;
-
-import com.excilys.cdb.model.entities.Computer;
 import com.excilys.cdb.model.entities.Page;
 import com.excilys.cdb.resources.SortColumn;
 import com.excilys.cdb.resources.SortType;
 
-@Repository
 public abstract class DAO<T> {
 
     /**
      * Permet de récupérer un objet via son ID.
-     * 
      * @param id
      *            id of the object you want to find
      * @return the object
@@ -23,7 +16,6 @@ public abstract class DAO<T> {
 
     /**
      * Permet de récupérer un objet via son nom.
-     * 
      * @param name
      *            the name of the object you want to find
      * @return the object
@@ -32,7 +24,6 @@ public abstract class DAO<T> {
 
     /**
      * Create an entry on the DB relative to an object.
-     * 
      * @param obj
      *            the object you want to update
      * @return
@@ -41,7 +32,6 @@ public abstract class DAO<T> {
 
     /**
      * Update an entry on the DB.
-     * 
      * @param obj
      *            the object you want to update
      */
@@ -56,7 +46,6 @@ public abstract class DAO<T> {
 
     /**
      * Get a list of Objects.
-     * 
      * @param pageNb
      *            the page number
      * @param elemPerPg

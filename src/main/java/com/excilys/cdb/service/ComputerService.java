@@ -2,6 +2,7 @@ package com.excilys.cdb.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.excilys.cdb.model.dao.ComputerDAO;
 import com.excilys.cdb.model.dto.ComputerDTO;
@@ -12,6 +13,7 @@ import com.excilys.cdb.resources.SortColumn;
 import com.excilys.cdb.resources.SortType;
 
 @Service
+@Transactional
 public class ComputerService {
 
     @Autowired
