@@ -28,9 +28,9 @@ public class AddComputer extends HttpServlet {
     private static final Logger LOGGER = LoggerFactory.getLogger(AddComputer.class);
 
     @Autowired
-    private static ComputerService computerService;
+    private ComputerService computerService;
     @Autowired
-    private static CompanyService companyService;
+    private CompanyService companyService;
     
     public void init(ServletConfig config) throws ServletException {
         super.init(config);

@@ -10,7 +10,7 @@ import com.excilys.cdb.model.dao.ComputerDAO;
 import com.excilys.cdb.model.dto.CompanyDTO;
 import com.excilys.cdb.model.entities.Company;
 import com.excilys.cdb.model.entities.Page;
-import com.excilys.cdb.model.mappers.CompanyMapper;
+import com.excilys.cdb.model.mappers.service.CompanyMapper;
 
 @Service
 @Transactional

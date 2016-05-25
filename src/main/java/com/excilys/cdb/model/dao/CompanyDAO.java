@@ -1,225 +1,76 @@
 package com.excilys.cdb.model.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 
 import com.excilys.cdb.model.entities.Company;
 import com.excilys.cdb.model.entities.Page;
-import com.excilys.cdb.model.exception.DAOException;
-import com.excilys.cdb.model.jdbc.ConnectionManager;
-import com.excilys.cdb.resources.SortColumn;
-import com.excilys.cdb.resources.SortType;
+import com.excilys.cdb.model.mappers.database.CompanyRowMapper;
 
 @Repository
 public class CompanyDAO extends DAO<Company> {
 
-    private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(CompanyDAO.class);
     private static final String FIND_ID = "SELECT id, name from company WHERE id = ?;";
     private static final String FIND_NAME = "SELECT id, name from company WHERE name = ?;";
-    private static final String CREATE = "INSERT INTO company (name) VALUES (?);";
     private static final String UPDATE = "UPDATE company SET name= ? WHERE id = ?;";
     private static final String DELETE = "DELETE FROM company WHERE id = ?;";
-    private static final String LISTALL = "SELECT id,name from company LIMIT %d, %d;";
-    private static final String LISTALL_ORDERED = "SELECT id,name from company LIMIT %d, %d;";
+    private static final String LISTALL = "SELECT id,name from company LIMIT ?, ?;";
     private static final String COUNT = "SELECT COUNT(*) FROM company";
 
+    private JdbcTemplate jdbcTemplate;
+    private SimpleJdbcInsert insertCompany;
+
     @Autowired
-    private ConnectionManager manager;
+    public CompanyDAO(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+        this.insertCompany = new SimpleJdbcInsert(jdbcTemplate.getDataSource()).withTableName("company")
+                .usingColumns("name").usingGeneratedKeyColumns("id");
+    }
 
     @Override
     public Company findById(long id) {
-        Company company = new Company();
-        ResultSet rs = null;
-        Connection connection = null;
-        try {
-            connection = manager.getConnection();
-            PreparedStatement stmt = connection.prepareStatement(FIND_ID);
-            stmt.setLong(1, id);
-            rs = stmt.executeQuery();
-            rs.next();
-            company.setId(rs.getLong("id"));
-            company.setName(rs.getString("name"));
-        } catch (SQLException e) {
-            throw new DAOException("Fail to get a company by id", e);
-        }
-        return company;
+        return jdbcTemplate.queryForObject(FIND_ID, new Object[] { id }, new CompanyRowMapper());
     }
 
     @Override
     public Company findByName(String name) {
-        Company company = new Company();
-        ResultSet rs = null;
-        Connection connection = null;
-        try {
-            connection = manager.getConnection();
-            PreparedStatement stmt = connection.prepareStatement(FIND_NAME);
-            stmt.setString(1, name);
-            rs = stmt.executeQuery();
-            rs.next();
-            company.setId(rs.getLong("id"));
-            company.setName(rs.getString("name"));
-        } catch (SQLException e) {
-            throw new DAOException("Fail to get a company by name", e);
-        }
-        return company;
+        return jdbcTemplate.queryForObject(FIND_NAME, new Object[] { name }, new CompanyRowMapper());
     }
 
     @Override
     public long create(Company comp) {
-        Connection connection = null;
-        long id = 0;
-        try {
-            connection = manager.getConnection();
-            PreparedStatement stmt = connection.prepareStatement(CREATE, PreparedStatement.RETURN_GENERATED_KEYS);
-            stmt.setString(1, comp.getName());
-            if (stmt.executeUpdate() == 1) {
-                CompanyDAO.LOGGER.info("Insert company");
-            } else {
-                CompanyDAO.LOGGER.warn("Fail to create a company");
-            }
-            ResultSet rs = stmt.getGeneratedKeys();
-            if (rs.next()) {
-                id = rs.getInt(1);
-            } else {
-                throw new DAOException("Fail to get the company id");
-            }
-
-        } catch (SQLException e) {
-            CompanyDAO.LOGGER.error(e.getMessage());
-            throw new DAOException("Fail to create a company", e);
-        }
-        return id;
+        Map<String, Object> parameters = new HashMap<String, Object>();
+        parameters.put("name", comp.getName());
+        return insertCompany.executeAndReturnKey(parameters).longValue();
     }
 
     @Override
     public void update(Company comp) {
-        Connection connection = null;
-        try {
-            connection = manager.getConnection();
-            PreparedStatement stmt = connection.prepareStatement(UPDATE);
-            stmt.setString(1, comp.getName());
-            stmt.setLong(2, comp.getId());
-            if (stmt.executeUpdate() == 1) {
-                CompanyDAO.LOGGER.info("Update a company");
-            } else {
-                CompanyDAO.LOGGER.warn("Fail to update a company");
-            }
-
-        } catch (SQLException e) {
-            CompanyDAO.LOGGER.error(e.getMessage());
-            throw new DAOException("Fail to update a company", e);
-        }
+        jdbcTemplate.update(UPDATE, comp.getName(), comp.getId());
     }
 
     @Override
     public void delete(long id) {
-        Connection connection = null;
-        try {
-            connection = manager.getConnection();
-            PreparedStatement stmt = connection.prepareStatement(DELETE);
-            stmt.setLong(1, id);
-            if (stmt.executeUpdate() == 1) {
-                CompanyDAO.LOGGER.info("Delete a company");
-            } else {
-                CompanyDAO.LOGGER.warn("Fail to delete a company");
-            }
-        } catch (SQLException e) {
-            CompanyDAO.LOGGER.error(e.getMessage());
-            throw new DAOException("Fail to delete a company", e);
-        }
+        jdbcTemplate.update(DELETE, id);
     }
 
     public void deleteWithLocalThread(long companyId) {
-        Connection connection = manager.getConnection();
-        try {
-            PreparedStatement stmt = connection.prepareStatement(DELETE);
-            stmt.setLong(1, companyId);
-            if (stmt.executeUpdate() == 1) {
-                CompanyDAO.LOGGER.info("Delete a company");
-            } else {
-                CompanyDAO.LOGGER.warn("Fail to delete a company");
-            }
-        } catch (SQLException e) {
-            throw new DAOException("Fail to delete a company", e);
-        }
+        jdbcTemplate.update(DELETE, companyId);
     }
 
     @Override
     public Page<Company> index(int pageNb, int elemPerPg) {
         Page<Company> page = new Page<>();
-        ResultSet rs = null;
-        Connection connection = null;
         page.setPageNumber(pageNb);
         page.setElementPerPage(elemPerPg);
-        try {
-            connection = manager.getConnection();
-            rs = connection.prepareStatement(String.format(LISTALL, pageNb * elemPerPg, elemPerPg)).executeQuery();
-            page = new Page<>();
-            page.setPageNumber(pageNb);
-            while (rs.next()) {
-                Company company = new Company();
-                company.setId(rs.getLong("id"));
-                company.setName(rs.getString("name"));
-                page.addEntity(company);
-            }
-            rs.close();
-            rs = connection.prepareStatement(COUNT).executeQuery();
-            rs.next();
-            page.setTotalElements(rs.getInt(1));
-
-        } catch (SQLException e) {
-            throw new DAOException("Fail to get all companies", e);
-        } 
+        page.setTotalElements(jdbcTemplate.queryForObject(COUNT, Integer.class));
+        page.setEntities(jdbcTemplate.query(LISTALL, new CompanyRowMapper(), pageNb * elemPerPg, elemPerPg));
         return page;
-    }
-
-    @Override
-    public Page<Company> indexSort(int pageNb, int elemPerPg, SortColumn sc, SortType sortType, String name) {
-        Page<Company> page = new Page<>();
-        Connection connection = null;
-        page.setPageNumber(pageNb);
-        page.setElementPerPage(elemPerPg);
-        ResultSet rs = null;
-        try {
-            connection = manager.getConnection();
-            PreparedStatement stmt = connection.prepareStatement(
-                    String.format(LISTALL_ORDERED,
-                            (sc.ordinal() + 1) + ((sortType == SortType.ASC) ? " ASC " : " DESC ")),
-                    pageNb * elemPerPg, elemPerPg);
-            stmt.setString(1, "%" + name + "%");
-            rs = stmt.executeQuery();
-            page = new Page<>();
-            page.setPageNumber(pageNb);
-            page.setSortCol(sc);
-            page.setSortType(sortType);
-            page.setSearch(name);
-            while (rs.next()) {
-                Company company = new Company();
-                company.setId(rs.getLong("id"));
-                company.setName(rs.getString("name"));
-                page.addEntity(company);
-            }
-            rs.close();
-            rs = connection.prepareStatement(COUNT).executeQuery();
-            rs.next();
-            page.setTotalElements(rs.getInt(1));
-
-        } catch (SQLException e) {
-            throw new DAOException("Fail to get all companies", e);
-        }
-        return page;
-    }
-
-    @Override
-    public void deleteByCompany(long companyId) {
-        // TODO Auto-generated method stub
-
     }
 
 }

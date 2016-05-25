@@ -8,7 +8,7 @@ import com.excilys.cdb.model.dao.ComputerDAO;
 import com.excilys.cdb.model.dto.ComputerDTO;
 import com.excilys.cdb.model.entities.Computer;
 import com.excilys.cdb.model.entities.Page;
-import com.excilys.cdb.model.mappers.ComputerMapper;
+import com.excilys.cdb.model.mappers.service.ComputerMapper;
 import com.excilys.cdb.resources.SortColumn;
 import com.excilys.cdb.resources.SortType;
 
