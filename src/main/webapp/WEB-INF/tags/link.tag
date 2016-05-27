@@ -6,7 +6,7 @@
 <%@ attribute name="sortType" required="true" type="Integer"%>
 <%@ attribute name="search" required="true"%>
 <%@ attribute name="idRef" required="false"%>
-<%@ attribute name="msg" required="true"%>
+<%@ attribute name="msg" required="false"%>
 <%@ attribute name="context" required="true"%>
 <%@ attribute name="classRef" required="false"%>
 

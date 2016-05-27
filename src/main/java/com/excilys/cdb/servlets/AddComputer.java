@@ -77,7 +77,8 @@ public class AddComputer extends HttpServlet {
             computer.setName(name);
             computer.setIntroduced(introduced);
             computer.setDiscontinued(discontinued);
-            computer.setCompany(company);
+            computer.setCompanyName(company.getName());
+            computer.setCompanyId(company.getId());
 
             computerService.create(computer);
 

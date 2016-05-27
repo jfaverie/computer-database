@@ -15,7 +15,7 @@ public class ComputerMapper {
     public static ComputerDTO convertComputer(Computer computer) {
         return computer == null ? null : ComputerDTO.getBuilder().id(computer.getId()).name(computer.getName())
                 .introduced(computer.getIntroduced()).discontinued(computer.getDiscontinued())
-                .company(CompanyMapper.convertCompany(computer.getCompany())).build();
+                .companyName(computer.getCompany().getName()).companyId(computer.getCompany().getId()).build();
     }
 
     /**

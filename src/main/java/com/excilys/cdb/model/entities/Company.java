@@ -1,10 +1,8 @@
 package com.excilys.cdb.model.entities;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 
 import com.excilys.cdb.model.dto.CompanyDTO;
-import com.excilys.cdb.model.entities.Computer.ComputerBuilder;
 
 public class Company implements Serializable {
 
@@ -13,18 +11,22 @@ public class Company implements Serializable {
 
     /**
      * Constructor.
+     * @param companyBuilder
+     *            the builder
      */
     public Company(CompanyBuilder companyBuilder) {
         super();
     }
 
+    /**
+     * Constructor.
+     */
     public Company() {
         super();
     }
 
     /**
      * Constructor.
-     * 
      * @param id
      *            id of the Company
      * @param name
@@ -38,7 +40,6 @@ public class Company implements Serializable {
 
     /**
      * Create an entity from a DTO.
-     * 
      * @param dto
      *            the dto used to create the entity
      */
@@ -75,20 +76,39 @@ public class Company implements Serializable {
         private long id;
         private String name;
 
+        /**
+         * Builder constructor.
+         */
         public CompanyBuilder() {
             super();
         }
 
+        /**
+         * Build the id.
+         * @param id
+         *            the id to build
+         * @return the updated object
+         */
         private CompanyBuilder id(long id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * Build the name.
+         * @param name
+         *            the name to build
+         * @return the updated object
+         */
         private CompanyBuilder name(String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * Build the id.
+         * @return the updated object
+         */
         public Company build() {
             return new Company(this);
         }

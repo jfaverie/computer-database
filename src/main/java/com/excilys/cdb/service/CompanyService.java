@@ -1,6 +1,5 @@
 package com.excilys.cdb.service;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,7 +22,6 @@ public class CompanyService {
 
     /**
      * Return a company from an id.
-     * 
      * @param id
      *            of the company
      * @return the company you want
@@ -34,7 +32,6 @@ public class CompanyService {
 
     /**
      * Return all the company of the database, per page.
-     * 
      * @param pageNb
      *            the page you want
      * @param elemPerPg
@@ -47,9 +44,9 @@ public class CompanyService {
 
     /**
      * Add a new company in the database.
-     * 
      * @param entity
      *            the company to add in the database
+     * @return the id of the created company
      */
     public long create(CompanyDTO entity) {
         long id = companyDAO.create(new Company(entity));
@@ -58,7 +55,6 @@ public class CompanyService {
 
     /**
      * Update a company in the database.
-     * 
      * @param entity
      *            the company to update
      */
@@ -68,7 +64,6 @@ public class CompanyService {
 
     /**
      * Delete a company in the database.
-     * 
      * @param id
      *            the id of the company to delete
      */

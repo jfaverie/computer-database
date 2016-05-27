@@ -23,11 +23,14 @@ public class Home extends HttpServlet {
     @Autowired
     private RequestToPage rtp;
 
+    /**
+     * @param config
+     *            not used
+     */
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this, config.getServletContext());
     }
-    
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

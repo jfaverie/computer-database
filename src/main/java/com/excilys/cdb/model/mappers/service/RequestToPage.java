@@ -18,6 +18,11 @@ public class RequestToPage {
     @Autowired
     private ComputerService computerService;
 
+    /**
+     * Convert a request (not used anymore).
+     * @param request
+     * @return
+     */
     public Page<ComputerDTO> convert(HttpServletRequest request) {
         final HttpSession session = request.getSession(true);
         int page;

@@ -2,14 +2,40 @@ package com.excilys.cdb.model.dto;
 
 import java.time.LocalDate;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class ComputerDTO {
 
     private long id;
+    @NotNull
+    @Size(min = 2, max = 30)
     private String name;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate introduced;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate discontinued;
-    private CompanyDTO company;
+    private Long companyId;
+    private String companyName;
 
+
+    public Long getCompanyId() {
+        return companyId;
+    }
+
+    public void setCompanyId(Long companyId) {
+        this.companyId = companyId;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
 
     public long getId() {
         return id;
@@ -43,20 +69,13 @@ public class ComputerDTO {
         this.discontinued = discontinued;
     }
 
-    public CompanyDTO getCompany() {
-        return company;
-    }
-
-    public void setCompany(CompanyDTO company) {
-        this.company = company;
-    }
-
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((company == null) ? 0 : company.hashCode());
+        result = (int) (prime * result + companyId);
+        result = prime * result + ((companyName == null) ? 0 : companyName.hashCode());
         result = prime * result + ((discontinued == null) ? 0 : discontinued.hashCode());
         result = prime * result + (int) (id ^ (id >>> 32));
         result = prime * result + ((introduced == null) ? 0 : introduced.hashCode());
@@ -66,18 +85,25 @@ public class ComputerDTO {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
+        if (this == obj) {
             return true;
-        if (obj == null)
+        }
+        if (obj == null) {
             return false;
-        if (getClass() != obj.getClass())
+        }
+        if (getClass() != obj.getClass()) {
             return false;
+        }
         ComputerDTO other = (ComputerDTO) obj;
-        if (company == null) {
-            if (other.company != null)
-                return false;
-        } else if (!company.equals(other.company))
+        if (companyId != other.companyId) {
             return false;
+        }
+        if (companyName == null) {
+            if (other.companyName != null)
+                return false;
+        } else if (!companyName.equals(other.companyName)) {
+            return false;
+        }
         if (discontinued == null) {
             if (other.discontinued != null)
                 return false;
@@ -160,12 +186,17 @@ public class ComputerDTO {
 
         /**
          * Use to set the company.
-         * @param companyName
+         * @param companyId
          *            to set
          * @return the builder
          */
-        public Builder company(CompanyDTO company) {
-            this.computerDTO.company = company;
+        public Builder companyId(Long companyId) {
+            this.computerDTO.companyId = companyId;
+            return this;
+        }
+
+        public Builder companyName(String companyName) {
+            this.computerDTO.companyName = companyName;
             return this;
         }
 

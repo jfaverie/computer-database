@@ -26,7 +26,7 @@ $(function() {
 		}
 	}
 
-	$('#computerName').on('input', function() {
+	$('#name').on('input', function() {
 		if (!validateString($(this).val())) {
 			$(this).parent().first().addClass('has-error');
 			$(this).parent().first().removeClass('has-success');

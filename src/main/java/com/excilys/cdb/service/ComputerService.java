@@ -41,6 +41,20 @@ public class ComputerService {
         return ComputerMapper.convertPageToDTO(computerDAO.index(pageNb, elemPerPg));
     }
 
+    /**
+     * Return all the computers of the database, per page.
+     * @param pageNb
+     *            the page you want
+     * @param elemPerPg
+     *            the number of element per page
+     * @param sc
+     *            the column to sort
+     * @param sortType
+     *            ascending or descending
+     * @param name
+     *            the name to search
+     * @return a page of computers
+     */
     public Page<ComputerDTO> indexSort(int pageNb, int elemPerPg, SortColumn sc, SortType sortType, String name) {
         return ComputerMapper.convertPageToDTO(computerDAO.indexSort(pageNb, elemPerPg, sc, sortType, name));
     }
@@ -49,6 +63,7 @@ public class ComputerService {
      * Add a new computer in the database.
      * @param entity
      *            the computer to add in the database
+     * @return the id of the created computer
      */
     public long create(ComputerDTO entity) {
         long id = computerDAO.create(new Computer(entity));

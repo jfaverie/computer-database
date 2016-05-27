@@ -90,33 +90,41 @@ public class Page<T> {
     }
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
+        if (this == obj) {
             return true;
-        if (obj == null)
+        }
+        if (obj == null) {
             return false;
-        if (getClass() != obj.getClass())
+        }
+        if (getClass() != obj.getClass()) {
             return false;
+        }
         Page other = (Page) obj;
-        if (elementPerPage != other.elementPerPage)
+        if (elementPerPage != other.elementPerPage) {
             return false;
+        }
         if (entities == null) {
             if (other.entities != null)
                 return false;
         } else if (!entities.equals(other.entities))
             return false;
-        if (pageNumber != other.pageNumber)
+        if (pageNumber != other.pageNumber) {
             return false;
+        }
         if (search == null) {
             if (other.search != null)
                 return false;
         } else if (!search.equals(other.search))
             return false;
-        if (sortCol != other.sortCol)
+        if (sortCol != other.sortCol) {
             return false;
-        if (sortType != other.sortType)
+        }
+        if (sortType != other.sortType) {
             return false;
-        if (totalElements != other.totalElements)
+        }
+        if (totalElements != other.totalElements) {
             return false;
+        }
         return true;
     }
 

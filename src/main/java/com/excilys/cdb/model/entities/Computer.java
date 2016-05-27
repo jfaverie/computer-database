@@ -61,7 +61,10 @@ public class Computer implements Serializable {
             this.name = dto.getName();
             this.introduced = dto.getIntroduced();
             this.discontinued = dto.getDiscontinued();
-            this.company = new Company(dto.getCompany());
+            if (dto.getCompanyId() != null) {
+                this.company = new Company();
+                this.company.setId(dto.getCompanyId());
+            }
         }
     }
 
@@ -175,7 +178,8 @@ public class Computer implements Serializable {
         private String name;
         private LocalDate introduced;
         private LocalDate discontinued;
-        private Company company;
+        private String companyName;
+        private long companyId;
 
         public ComputerBuilder() {
             super();
@@ -201,8 +205,13 @@ public class Computer implements Serializable {
             return this;
         }
 
-        private ComputerBuilder company(Company company) {
-            this.company = company;
+        private ComputerBuilder companyName(String companyName) {
+            this.companyName = companyName;
+            return this;
+        }
+
+        private ComputerBuilder companyId(long companyId) {
+            this.companyId = companyId;
             return this;
         }
 

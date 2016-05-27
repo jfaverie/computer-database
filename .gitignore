@@ -72,8 +72,8 @@ local.properties
 .Trash-*
 
 #log files
-debug.log
-errors.log
+*.log
+
 
 /build/
 /target/

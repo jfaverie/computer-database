@@ -26,7 +26,7 @@ public class ComputerValidator {
         String introduced = req.getParameter("introduced");
         String discontinued = req.getParameter("discontinued");
         String company = req.getParameter("companyId");
-        
+
         if (name.isEmpty()) {
             return false;
         }
@@ -51,6 +51,15 @@ public class ComputerValidator {
         }
         return true;
     }
+
+    /**
+     * Check the validity of the Computer.
+     * @param dto
+     *            the computer dto
+     * @param checkId
+     *            is the id ok
+     * @return true if the dates are ok
+     */
     public static boolean fromDto(ComputerDTO dto, boolean checkId) {
         if (checkId) {
             Long id = new Long(dto.getId());
@@ -62,14 +71,14 @@ public class ComputerValidator {
         if (dto.getName().isEmpty()) {
             return false;
         }
-        
+
         LocalDate intro = dto.getIntroduced();
         LocalDate disco = dto.getDiscontinued();
-        
+
         if (intro != null && disco != null && intro.isAfter(disco)) {
             return false;
         }
-        
+
         return true;
     }
 }

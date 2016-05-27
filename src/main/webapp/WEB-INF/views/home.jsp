@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="mylib"%>
@@ -21,6 +22,14 @@
 <link href="${req.contextPath}/resources/css/main.css" rel="stylesheet"
 	media="screen">
 </head>
+
+<spring:message code="generic.computerName" var= "computerName" />
+<spring:message code="generic.introduced" var= "introduced"/>
+<spring:message code="generic.discontinued" var= "discontinued"/>
+<spring:message code="generic.company" var= "company"/>
+<spring:message code="generic.edit" var= "edit"/>
+<spring:message code="generic.add" var= "add"/>
+
 <body>
 	<header class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
@@ -31,28 +40,29 @@
 
 	<section id="main">
 		<div class="container">
-			<h1 id="homeTitle">${nbComputers}&nbsp;Computers&nbsp;found</h1>
+			<h1 id="homeTitle">${nbComputers}&nbsp;<spring:message code="index.computerFound" /></h1>
 			<div id="actions" class="form-horizontal">
 				<div class="pull-left">
-					<form id="searchForm" action="#" method="GET" class="form-inline">
+					<form id="searchForm" method="GET" class="form-inline">
 
 						<input type="search" id="searchbox" name="search"
-							class="form-control" placeholder="Search name" /> <input
-							type="submit" id="searchsubmit" value="Filter by name"
+							class="form-control" placeholder="<spring:message code="index.search"/>" /> <input
+							type="submit" id="searchsubmit" value="<spring:message code="index.filter"/>"
 							class="btn btn-primary" />
 					</form>
 				</div>
 				<div class="pull-right">
-					<mylib:link msg="Add Computer" idRef="addComputer"
+					<mylib:link msg="${add}" idRef="addComputer"
 						classRef="btn btn-success" context="addComputer" cursor="0"
 						limit="10" search="" sortType="0" sortCol="0" />
 					<a class="btn btn-default" id="editComputer" href="#"
-						onclick="$.fn.toggleEditMode();">Edit</a>
+						onclick="$.fn.toggleEditMode(<spring:message code="generic.edit"/>)', '<spring:message code="index.view"/>');"><spring:message code="generic.edit" /></a>
 				</div>
 			</div>
 		</div>
 
-		<form id="deleteForm" action="${req.contextPath}/deleteComputer" method="POST">
+		<form id="deleteForm" action="${req.contextPath}/deleteComputer"
+			method="POST">
 			<input type="hidden" name="selection" value="">
 		</form>
 
@@ -70,30 +80,18 @@
 									class="fa fa-trash-o fa-lg"></i>
 							</a>
 						</span></th>
-						<th><mylib:link context="" msg="Computer name"
-								cursor="${currentPage}"
-								limit="${limit}"
-								search="${search}" 
-								sortCol="1"
-								sortType="${computerSort}" /></th>
-						<th><mylib:link context="" msg="Introduced date"
-								cursor="${currentPage}"
-								limit="${limit}"
-								search="${search}" 
-								sortCol="2"
-								sortType="${introSort}" /></th>
-						<th><mylib:link context="" msg="Discontinued date"
-								cursor="${currentPage}"
-								limit="${limit}"
-								search="${search}" 
-								sortCol="3"
-								sortType="${discoSort}" /></th>
-						<th><mylib:link context="" msg="Company"
-								cursor="${currentPage}"
-								limit="${limit}"
-								search="${search}" 
-								sortCol="4"
-								sortType="${companySort}" /></th>
+						<th><mylib:link context="" msg="${computerName}"
+								cursor="${currentPage}" limit="${limit}" search="${search}"
+								sortCol="1" sortType="${computerSort}" /></th>
+						<th><mylib:link context="" msg="${introduced}"
+								cursor="${currentPage}" limit="${limit}" search="${search}"
+								sortCol="2" sortType="${introSort}" /></th>
+						<th><mylib:link context="" msg="${discontinued}"
+								cursor="${currentPage}" limit="${limit}" search="${search}"
+								sortCol="3" sortType="${discoSort}" /></th>
+						<th><mylib:link context="" msg="${company}"
+								cursor="${currentPage}" limit="${limit}" search="${search}"
+								sortCol="4" sortType="${companySort}" /></th>
 
 					</tr>
 				</thead>
@@ -106,7 +104,7 @@
 							<td><a href="editComputer?id=${computer.id}">${computer.name}</a></td>
 							<td>${computer.introduced}</td>
 							<td>${computer.discontinued}</td>
-							<td>${computer.company.name}</td>
+							<td>${computer.companyName}</td>
 						</tr>
 					</c:forEach>
 				</tbody>
@@ -116,7 +114,9 @@
 
 	<footer class="navbar-fixed-bottom">
 		<div class="container text-center">
-			<mylib:pagination currentPage="${currentPage}" limit="${limit}" nbPage="${nbPage}" search="${search}" sortType="${sortType}" sortCol="${sortCol}"/>
+			<mylib:pagination currentPage="${currentPage}" limit="${limit}"
+				nbPage="${nbPage}" search="${search}" sortType="${sortType}"
+				sortCol="${sortCol}" />
 			<div class="btn-group btn-group-sm pull-right" role="group">
 				<button onclick="self.location.href='?page=0&nbel=10'" type="button"
 					class="btn btn-default">10</button>
