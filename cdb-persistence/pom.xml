@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<artifactId>cdb-persistence</artifactId>
+	<modelVersion>4.0.0</modelVersion>
+	<name>Persistence module</name>
+	<packaging>jar</packaging>
+
+	<parent>
+		<artifactId>cdb</artifactId>
+		<groupId>com.excilys</groupId>
+		<relativePath>../pom.xml</relativePath>
+		<version>2.2</version>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<artifactId>cdb-core</artifactId>
+			<groupId>${project.groupId}</groupId>
+			<version>${project.version}</version>
+		</dependency>
+
+
+<!-- Database -->
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+			<version>${hikaricp.version}</version>
+		</dependency>
+
+        <!-- Spring -->
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring.version}</version>
+
+
+
+	</dependencies>
+
+	<properties>
+		<parentBasedir>../</parentBasedir>
+	</properties>
+	
+</project>
