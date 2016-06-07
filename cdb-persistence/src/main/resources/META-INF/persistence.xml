@@ -8,6 +8,6 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<class>com.excilys.cdb.model.entities.Company</class>
 		<class>com.excilys.cdb.model.entities.Computer</class>
-		<class>com.excilys.cdb.model.entities.User</class>
+<!--  		<class>com.excilys.cdb.model.entities.User</class>  -->
 	</persistence-unit>
 </persistence>

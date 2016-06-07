@@ -5,7 +5,26 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
                             http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 
-	<!-- spring settings (applicationContext) -->
+	<!-- Security -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/spring/*.xml
+		</param-value>
+	</context-param>
+
+<filter>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+	<!-- - Loads the root application context of this web app at startup. - 
+		The application context is then available via - WebApplicationContextUtils.getWebApplicationContext(servletContext). -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
@@ -31,30 +50,7 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
-<!-- 	<context-param>
-		<param-name>spring.profiles.active</param-name>
-		<param-value>dev</param-value>
-	</context-param>
-	<context-param>
-		<param-name>spring.profiles.default</param-name>
-		<param-value>dev</param-value>
-	</context-param>
-	<context-param>
-		<param-name>spring.liveBeansView.mbeanDomain</param-name>
-		<param-value>dev</param-value>
-	</context-param> -->
 
-	<!-- Old mapping (needs to be deleted) -->
-	<!-- <servlet> <servlet-name>Home</servlet-name> <servlet-class>com.excilys.cdb.servlets.Home</servlet-class> 
-		</servlet> <servlet-mapping> <servlet-name>Home</servlet-name> <url-pattern>/home</url-pattern> 
-		</servlet-mapping> <servlet> <servlet-name>AddComputer</servlet-name> <servlet-class>com.excilys.cdb.servlets.AddComputer</servlet-class> 
-		</servlet> <servlet-mapping> <servlet-name>AddComputer</servlet-name> <url-pattern>/addComputer</url-pattern> 
-		</servlet-mapping> <servlet> <servlet-name>EditComputer</servlet-name> <servlet-class>com.excilys.cdb.servlets.EditComputer</servlet-class> 
-		</servlet> <servlet-mapping> <servlet-name>EditComputer</servlet-name> <url-pattern>/editComputer</url-pattern> 
-		</servlet-mapping> <servlet> <servlet-name>DeleteComputer</servlet-name> 
-		<servlet-class>com.excilys.cdb.servlets.DeleteComputer</servlet-class> </servlet> 
-		<servlet-mapping> <servlet-name>DeleteComputer</servlet-name> <url-pattern>/deleteComputer</url-pattern> 
-		</servlet-mapping> -->
 	<!-- Error redirection -->
 	<error-page>
 		<error-code>403</error-code>
@@ -68,6 +64,5 @@
 		<error-code>500</error-code>
 		<location>/resources/views/500.html</location>
 	</error-page>
-
 
 </web-app>

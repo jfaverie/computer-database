@@ -1,4 +1,4 @@
-package com.excilys.cdb.servlets;
+/*package com.excilys.cdb.servlets;
 
 import java.io.IOException;
 
@@ -27,6 +27,7 @@ public class Home extends HttpServlet {
      * @param config
      *            not used
      */
+/*
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this, config.getServletContext());
@@ -52,3 +53,4 @@ public class Home extends HttpServlet {
     }
 
 }
+*/

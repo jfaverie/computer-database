@@ -34,6 +34,7 @@
 		<querydsl.version>4.1.1</querydsl.version>
 		<hibernatePersistence.version>1.0.0.Final</hibernatePersistence.version>
 		<springSecurity.version>4.1.0.RELEASE</springSecurity.version>
+		<javax.inject.version>1</javax.inject.version>
 
 	</properties>
 
@@ -140,21 +141,30 @@
 
 
 
+		<!-- Servlet Libraries -->
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>${jsp.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl.version}</version>
+		</dependency>
 
 	</dependencies>
-<build>
-		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>${compiler.version}</version>
-				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-				</configuration>
-			</plugin>
-		</plugins>
-		<finalName>cdb</finalName>
-	</build>
+
 	<modules>
 		<module>cdb-core</module>
 		<module>cdb-persistence</module>

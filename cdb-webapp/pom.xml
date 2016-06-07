@@ -55,13 +55,13 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
-            <version>${spring.security.version}</version>
+            <version>${springSecurity.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
-            <version>${spring.security.version}</version>
+            <version>${springSecurity.version}</version>
         </dependency>
 
 
@@ -153,6 +153,8 @@
 
 	</dependencies>
 			<!-- Tomcat -->
+	<build>
+		<plugins>
 
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
@@ -166,6 +168,6 @@
 			</plugin>
 
 		</plugins>
-		<finalName>cdb</finalName>
+		<finalName>computer-database</finalName>
 	</build>
 </project>

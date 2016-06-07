@@ -11,6 +11,7 @@
 		<relativePath>../pom.xml</relativePath>
 		<version>2.2</version>
 	</parent>
+
 	<properties>
 		<parentBasedir>../</parentBasedir>
 	</properties>
@@ -26,15 +27,15 @@
 			<groupId>${project.groupId}</groupId>
 			<version>${project.version}</version>
 		</dependency>
-        <dependency>
-            <artifactId>cdb-persistence</artifactId>
-            <groupId>${project.groupId}</groupId>
-            <version>${project.version}</version>
-        </dependency>
-	    <dependency>
-            <artifactId>cdb-service</artifactId>
-            <groupId>${project.groupId}</groupId>
-            <version>${project.version}</version>
-	    </dependency>
+		<dependency>
+			<artifactId>cdb-persistence</artifactId>
+			<groupId>${project.groupId}</groupId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<artifactId>cdb-service</artifactId>
+			<groupId>${project.groupId}</groupId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
 </project>

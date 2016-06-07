@@ -24,12 +24,10 @@ import com.excilys.cdb.model.entities.Computer;
 import com.excilys.cdb.model.entities.Page;
 import com.excilys.cdb.model.entities.QCompany;
 import com.excilys.cdb.model.entities.QComputer;
-import com.excilys.cdb.model.mappers.database.ComputerRowMapper;
 import com.excilys.cdb.resources.SortColumn;
 import com.excilys.cdb.resources.SortType;
 import com.querydsl.jpa.hibernate.HibernateQueryFactory;
 import com.querydsl.jpa.impl.JPAQueryFactory;
-
 
 @Repository
 public class ComputerDAO extends DAO<Computer> {

@@ -35,13 +35,6 @@ public class CompanyDAO extends DAO<Company> {
     private EntityManager em;
     private JPAQueryFactory jpaQuery;
 
-//    @Autowired
-//    public CompanyDAO(JdbcTemplate jdbcTemplate) {
-//        this.jdbcTemplate = jdbcTemplate;
-//        this.insertCompany = new SimpleJdbcInsert(jdbcTemplate.getDataSource()).withTableName("company")
-//                .usingColumns("name").usingGeneratedKeyColumns("id");
-//    }
-
 
     @PersistenceContext(type = PersistenceContextType.EXTENDED)
     public void setEntityManager(EntityManager entityManager) {
@@ -79,7 +72,6 @@ public class CompanyDAO extends DAO<Company> {
 //        long id = comp.getId();
 //        return id;
 //    }
-    
 
     @Override
     public long create(Company comp) {

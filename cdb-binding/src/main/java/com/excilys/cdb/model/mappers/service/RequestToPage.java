@@ -1,3 +1,4 @@
+/*
 package com.excilys.cdb.model.mappers.service;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,6 +24,7 @@ public class RequestToPage {
      * @param request
      * @return
      */
+    /*
     public Page<ComputerDTO> convert(HttpServletRequest request) {
         final HttpSession session = request.getSession(true);
         int page;
@@ -91,3 +93,4 @@ public class RequestToPage {
     }
 
 }
+*/
